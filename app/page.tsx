@@ -1,3 +1,10 @@
+import { Header } from '@/2023/container';
+
 export default function Home() {
-  return <main>Hello COSMO PK !</main>;
+  return (
+    <main className='main'>
+      <Header />
+      Hello COSMO PK !
+    </main>
+  );
 }
