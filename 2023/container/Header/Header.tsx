@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { MenuItems } from '../../components';
 
-import classes from './header.module.scss';
+import classes from './Header.module.scss';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +12,6 @@ const Header = () => {
   const handleClick = () => {
     setIsMenuOpen(false);
   };
-
-
 
   return (
     <div className={classes['header__wrapper']}>
@@ -47,7 +45,7 @@ const Header = () => {
           ` ${isMenuOpen && classes['open']}`
         }
       >
-        <ul>
+        <ul className={classes['header__navigation']}>
           <MenuItems handleClick={handleClick} />
         </ul>
       </nav>
