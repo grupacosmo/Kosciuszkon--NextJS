@@ -1,0 +1,22 @@
+@import '@/styles/abstracts/variables.scss';
+
+.header {
+  &__navigation-link {
+    color: $text-color-1;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: $font-m;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+@media only screen and (min-width: $bp-80) {
+  .header {
+    &__navigation--mobile {
+      display: none;
+    }
+  }
+}

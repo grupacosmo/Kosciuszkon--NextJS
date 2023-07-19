@@ -1,0 +1,122 @@
+@import '@/styles/abstracts/variables.scss';
+
+.section-divider {
+  height: 150px;
+  background-color: $background-color-2;
+  position: relative;
+  width: 0;
+  margin: auto;
+  z-index: 2000;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    margin-top: 30px;
+    width: 0px;
+    top: 0px;
+    left: -900px;
+    border-top: 109px solid $main-color;
+    border-left: 900px solid transparent;
+    border-right: 900px solid transparent;
+    z-index: -2;
+    background-color: $background-color-2;
+  }
+
+  &__inner {
+    width: 0px;
+    height: 50px;
+    margin: auto;
+    margin-top: auto;
+    background-color: $background-color-1;
+    padding-top: 30px;
+    margin-top: -30px;
+    position: relative;
+    box-sizing: border-box;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      margin-top: 30px;
+      width: 0px;
+      top: -5px;
+      left: -900px;
+      border-top: 109px solid $background-color-1;
+      border-left: 900px solid transparent;
+      border-right: 900px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  &__title-outer {
+    position: absolute;
+    width: 300px;
+    height: 78px;
+    background-color: $main-color;
+    margin-left: calc(50% - 150px);
+    margin-top: 5px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      border-top: 78px solid transparent;
+      border-right: 30px solid $main-color;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      border-top: 78px solid transparent;
+      border-left: 30px solid $main-color;
+      left: 300px;
+      margin: 0px;
+    }
+  }
+
+  &__title-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 292px;
+    height: 75px;
+    background-color: $background-color-1;
+    margin-left: 4px;
+    margin-top: 3px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: -29px;
+      border-top: 74px solid transparent;
+      border-right: 29px solid $background-color-1;
+      border-bottom: 4px solid transparent;
+      margin: 0px;
+      z-index: 1;
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: 292px;
+      border-top: 74px solid transparent;
+      border-left: 29px solid $background-color-1;
+      border-bottom: 4px solid transparent;
+      margin: 0px;
+      z-index: 1;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: white;
+      z-index: 3;
+      font-size: 3.6rem;
+    }
+  }
+}
