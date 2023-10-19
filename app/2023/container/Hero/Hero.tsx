@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import classes from './Hero.module.scss';
 
-function Hero() {
+export function Hero(): ReactElement {
   return (
     <section className={classes['hero']}>
       <div className={classes['hero__gradient']}></div>
@@ -23,5 +24,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;

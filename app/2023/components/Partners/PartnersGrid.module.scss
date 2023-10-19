@@ -1,0 +1,14 @@
+@import '@/styles/abstracts/2023/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: $header-xl;
+  margin-top: $space-h;
+  margin-bottom: $space-xl;
+}

@@ -1,10 +1,12 @@
+'use client'
+
 import classes from './MenuItem.module.scss'
 
 interface MenuItemProps {
   handleClick: () => void;
 }
 
-function MenuItems({ handleClick }: MenuItemProps) {
+export function MenuItems({ handleClick }: MenuItemProps) {
   return (
     <>
       <li>
@@ -41,4 +43,3 @@ function MenuItems({ handleClick }: MenuItemProps) {
   );
 }
 
-export default MenuItems;

@@ -1,0 +1,7 @@
+@import '@/styles/abstracts/2023/variables.scss';
+
+.questionsContainer {
+  max-width: 930px;
+  width: 100%;
+  margin: $space-xl auto $space-h;
+}

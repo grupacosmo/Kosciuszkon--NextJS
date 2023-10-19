@@ -1,0 +1,35 @@
+@import '@/styles/abstracts/variables.scss';
+
+.topic-list {
+  margin-top: 50px;
+  height: 50vh;
+  background-color: $background-color-2;
+  position: relative;
+
+  &__block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    pointer-events: none;
+    z-index: 500;
+
+    svg {
+      height: 3rem;
+      width: 3rem;
+
+      g {
+        fill: $main-color;
+      }
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    text-align: center;
+  }
+}

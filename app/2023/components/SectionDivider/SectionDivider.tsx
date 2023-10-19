@@ -1,6 +1,6 @@
 import classes from './SectionDivider.module.scss';
 
-function SectionDivider({ name }: { name: string }) {
+export function SectionDivider({ name }: { name: string }) {
   return (
     <div className={classes['section-divider']} id={name}>
       <div className={classes['section-divider__inner']}>
@@ -14,4 +14,4 @@ function SectionDivider({ name }: { name: string }) {
   );
 }
 
-export default SectionDivider;
+

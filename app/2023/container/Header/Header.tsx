@@ -1,12 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-
+import { useState, type ReactElement } from 'react';
 import { MenuItems } from '../../components';
-
 import classes from './Header.module.scss';
 
-const Header = () => {
+export function Header(): ReactElement {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = () => {
@@ -51,6 +49,4 @@ const Header = () => {
       </nav>
     </div>
   );
-};
-
-export default Header;
+}
