@@ -15,7 +15,7 @@ export function PartnersGrid({
   containerClassName,
 }: PartnersGridProps) {
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       {categoryName && <h4 className={styles.header}>{categoryName}</h4>}
       <div className={containerClassName}>
         {partnerArray.map((element) => (
@@ -26,6 +26,6 @@ export function PartnersGrid({
           />
         ))}
       </div>
-    </div>
+    </article>
   );
 }

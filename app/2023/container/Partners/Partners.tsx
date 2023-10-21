@@ -14,7 +14,7 @@ import {
 
 export function Partners(): ReactElement {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <PartnersGrid
         partnerArray={honoraryPartnerData}
         categoryName='Patroni honorowi'
@@ -45,6 +45,6 @@ export function Partners(): ReactElement {
         categoryName=''
         containerClassName={clsx(styles.grid, styles.mediaPartnerGridTwo)}
       />
-    </div>
+    </section>
   );
 }
