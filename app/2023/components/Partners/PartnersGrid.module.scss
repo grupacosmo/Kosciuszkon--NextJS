@@ -8,7 +8,13 @@
 .header {
   width: 100%;
   text-align: center;
-  font-size: $header-xl;
+  font-size: $header-xxl;
   margin-top: $space-h;
   margin-bottom: $space-xl;
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .header {
+    font-size: $header-xl;
+  }
 }

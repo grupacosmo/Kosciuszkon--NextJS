@@ -133,24 +133,24 @@ export const mediaPartnerDataOne = [
   },
   {
     id: 14,
+    img: futurelab,
+    link: 'https://futurelab.pk.edu.pl/',
+    partnerName: 'FutureLab PK',
+    customClass: 'futurelab',
+  },
+  {
+    id: 15,
     img: itleaders,
     link: 'https://it-leaders.pl/',
     partnerName: 'IT-Leaders',
     customClass: 'itleaders',
   },
   {
-    id: 15,
+    id: 16,
     img: kms,
     link: 'https://kms.org.pl/',
     partnerName: 'Kraków Miastem Startupów',
     customClass: 'kms',
-  },
-  {
-    id: 16,
-    img: futurelab,
-    link: 'https://futurelab.pk.edu.pl/',
-    partnerName: 'FutureLab PK',
-    customClass: 'futurelab',
   },
 ];
 
