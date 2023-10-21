@@ -4,3 +4,4 @@ export { SectionGradient } from './SectionGradient/SectionGradient';
 export { Collapsible } from './Collapsible/Collapsible';
 export { PartnersGrid } from './Partners/PartnersGrid';
 export { FooterLinks } from './FooterLinks/FooterLinks';
+export { FooterContacts } from './FooterLinks/FooterContact';

@@ -30,7 +30,6 @@ export default function Home() {
       <SectionDivider name='partnerzy' />
       <Partners />
       <Footer />
-      Hello COSMO PK !
     </main>
   );
 }

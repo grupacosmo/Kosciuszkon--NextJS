@@ -1,9 +1,14 @@
 import kwadrat from '@/public/2023/kwadrat.webp';
 import wrss from '@/public/2023/wrss.webp';
 import fundacja from '@/public/2023/fundacja.webp';
-import cosmo from '@/public/2023/cosmo.png';
+import cosmo from '@/public/2023/cosmo.svg';
 
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+} from 'react-icons/fa';
 
 export const visitUsLinks = [
   {
@@ -49,7 +54,7 @@ export const externalLinksWithIcons = [
   {
     id: 1,
     href: 'https://www.facebook.com/samorzad.wiitpk',
-    label: ' WRSS WIiT',
+    label: 'WRSS WIiT',
     Icon: FaFacebookF,
   },
   {
@@ -69,5 +74,26 @@ export const externalLinksWithIcons = [
     href: 'https://www.instagram.com/cosmopk_kn/',
     label: 'Cosmo PK',
     Icon: FaInstagram,
+  },
+];
+
+export const contacts = [
+  {
+    id: 1,
+    href: 'mailto:hackathon.pk.2022@gmail.com',
+    label: 'hackathon.pk.2022@gmail.com',
+    Icon: FaEnvelope,
+  },
+  {
+    id: 2,
+    href: 'tel: +48 789-123-125',
+    label: '+48 789-123-125',
+    Icon: FaPhoneAlt,
+  },
+  {
+    id: 3,
+    href: 'tel: +48 795-773-929',
+    label: '+48 795-773-929',
+    Icon: FaPhoneAlt,
   },
 ];

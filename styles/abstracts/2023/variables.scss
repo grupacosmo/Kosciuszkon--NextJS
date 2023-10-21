@@ -7,13 +7,18 @@ $text-color-1: white;
 $text-color-2: #1eca94;
 $text-color-3: black;
 
+$color-main: #1eca94;
+$color-black: black;
+$color-white: white;
+$color-background: #262626;
+
 //------------ HEXAGON VARIABLES --------------//
 
-$hexagon-bigger: 9rem;
-$hexagon-big: 6.5rem;
-$hexagon-normal: 5rem;
-$hexagon-small: 4rem;
 $hexagon-smaller: 3rem;
+$hexagon-small: 4rem;
+$hexagon-normal: 5rem;
+$hexagon-big: 6.5rem;
+$hexagon-bigger: 9rem;
 
 //------------ FONT VARIABLES --------------//
 
@@ -23,7 +28,7 @@ $font-l: 1.8rem; // 18px
 $font-xl: 2rem; // 20px
 $font-xxl: 2.4rem; // 24px
 
-$header-xs: 2.0rem; // 20px
+$header-xs: 2rem; // 20px
 $header-s: 2.4rem; // 24px
 $header-m: 2.8rem; // 28px
 $header-l: 3.2rem; // 32px
@@ -31,6 +36,10 @@ $header-xl: 3.6rem; // 36px
 $header-xxl: 4rem; // 40px
 
 //------------ RESPONSIVE BREAKPOINTS --------------//
+
+$bp-desktop: 1274px; // 1274px
+$bp-tablet: 950px; // 950px
+$bp-mobile: 624px; // 624px
 
 $bp-140: 87.5em; // 1400px
 $bp-110: 68.75em; // 1100px
@@ -50,10 +59,12 @@ $radius-xh: 4.8rem; //48px
 
 //------------ SPACE VARIABLES --------------//
 
+$space-xs: 0.4rem; // 4px
 $space-s: 0.8rem; // 8px
 $space-m: 1.6rem; // 16px
 $space-l: 2.4rem; // 24px
 $space-xl: 3.2rem; // 32px
+$space-xxl: 4.8rem; // 48px
 $space-h: 6.4rem; // 64px
 $space-xh: 12.4rem; // 124px
 

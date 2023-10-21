@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from 'next/image';
 import { type ReactElement } from 'react';
+import Image, { StaticImageData } from 'next/image';
 import { type IconType } from 'react-icons';
 
 type BaseLink = {
@@ -26,35 +26,45 @@ type FooterLinksProps = {
   baseLinks?: BaseLink[];
   iconLinks?: IconLink[];
   imageLinks?: ImageLink[];
+  containerClassName?: string;
+  className?: string;
 };
 
 export function FooterLinks({
   baseLinks,
   imageLinks,
   iconLinks,
+  className,
+  containerClassName,
 }: FooterLinksProps): ReactElement {
   return (
-    <>
+    <ul className={containerClassName}>
       {baseLinks &&
         baseLinks.map(({ id, href, label }) => (
-          <a key={id} href={href} target='_blank' rel='noreferrer'>
-            {label}
-          </a>
+          <li key={id} className={className}>
+            <a href={href} target='_blank' rel='noreferrer'>
+              {label}
+            </a>
+          </li>
         ))}
 
       {iconLinks &&
         iconLinks.map(({ id, href, label, Icon }) => (
-          <a key={id} href={href} target='_blank' rel='noreferrer'>
-            <Icon />
-            {label}
-          </a>
+          <li key={id} className={className}>
+            <a href={href} target='_blank' rel='noreferrer'>
+              <Icon />
+              {label}
+            </a>
+          </li>
         ))}
       {imageLinks &&
         imageLinks.map(({ id, href, alt, src }) => (
-          <a key={id} href={href} target='_blank' rel='noreferrer'>
-            <Image src={src} alt={alt} width={50} height={50}/>
-          </a>
+          <li key={id} className={className}>
+            <a key={id} href={href} target='_blank' rel='noreferrer'>
+              <Image src={src} alt={alt} />
+            </a>
+          </li>
         ))}
-    </>
+    </ul>
   );
 }
