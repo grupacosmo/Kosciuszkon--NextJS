@@ -6,7 +6,7 @@ export const questionsData = [
   },
   {
     id: 2,
-    title: 'Czy na wydarzenie obowiązują zapisy? I kto może się zapisać?',
+    title: 'Czy na wydarzenie obowiązują zapisy? Kto może się zapisać?',
     text: 'Zapisy są na Hackathon, o których rozpoczęciu będziemy informować. Mogą obowiązywać zapisy na niektóre konferencje - szczegóły również pojawią się na stronie WWW i stronie wydarzenia.',
   },
   {

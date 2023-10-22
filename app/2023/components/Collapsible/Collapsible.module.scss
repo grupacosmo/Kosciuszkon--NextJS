@@ -23,6 +23,8 @@
   align-self: center;
   width: 16px;
   height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   margin-right: $space-m;
   color: $main-color;
 }
@@ -35,5 +37,19 @@
   padding: $space-m $space-s $space-l $space-s;
   & p {
     font-size: $font-l;
+  }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .button {
+    & h3 {
+      font-size: $font-m;
+    }
+  }
+
+  .content {
+    & p {
+      font-size: $font-s;
+    }
   }
 }

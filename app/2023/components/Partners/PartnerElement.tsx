@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
+import Image, { StaticImageData } from 'next/image';
 
 export type PartnerElementProps = {
   id: number;

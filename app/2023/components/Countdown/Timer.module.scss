@@ -1,0 +1,51 @@
+@import '@/styles/abstracts/2023/variables.scss';
+
+.container {
+  position: relative;
+}
+
+.background {
+  width: 378px;
+  height: 86px;
+}
+
+.timer {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  display: flex;
+  justify-content: start;
+  font-size: $header-l;
+
+  &Colon {
+    font-size: $header-xxl;
+  }
+
+  span {
+    padding: 0 $space-s;
+  }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .background {
+    align-self: center;
+    width: 279px;
+    height: 65px;
+  }
+
+  .timer {
+    width: 170px;
+    font-size: $header-s;
+  
+    &Colon {
+      font-size: $header-l;
+    }
+  
+    span {
+      padding: 0 $space-xs;
+    }
+  }
+}

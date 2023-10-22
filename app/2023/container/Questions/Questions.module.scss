@@ -1,7 +1,36 @@
 @import '@/styles/abstracts/2023/variables.scss';
 
-.questionsContainer {
-  max-width: 930px;
+.section {
   width: 100%;
-  margin: $space-xl auto $space-h;
+  margin-top: $space-xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xl;
+}
+
+.linksContainer {
+  width: 100%;
+  max-width: 930px;
+  margin: $space-xl auto 0;
+  padding: 0 $space-xl;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: $space-xl;
+}
+
+.faq {
+
+  &Container {
+    max-width: 930px;
+    width: 100%;
+    margin: $space-xl auto $space-h;
+    padding: 0 $space-l;
+  }
+}
+
+
+
+@media only screen and (max-width: $bp-mobile) {
 }

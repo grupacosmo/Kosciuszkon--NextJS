@@ -2,9 +2,8 @@
 
 import { useState, type ReactElement } from 'react';
 import clsx from 'clsx';
-import classes from './Collapsible.module.scss';
-
 import { BsFillCaretRightFill } from 'react-icons/bs';
+import styles from './Collapsible.module.scss';
 
 type CollapsibleProps = {
   title: string;
@@ -14,19 +13,19 @@ type CollapsibleProps = {
 export function Collapsible({ title, text }: CollapsibleProps): ReactElement {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const iconClassNames = clsx(classes.icon, { [classes['iconDown']]: isOpen });
+  const iconClassNames = clsx(styles.icon, { [styles.iconDown]: isOpen });
   return (
-    <div className={classes.container}>
+    <div className={styles.container}>
       <button
         type='button'
-        className={classes.button}
+        className={styles.button}
         onClick={() => setIsOpen((state) => !state)}
       >
         <BsFillCaretRightFill className={iconClassNames} />
         <h3>{title}</h3>
       </button>
       {isOpen && (
-        <div className={classes.content}>
+        <div className={styles.content}>
           <p>{text}</p>
         </div>
       )}
