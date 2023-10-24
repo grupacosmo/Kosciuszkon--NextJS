@@ -12,6 +12,7 @@
   background-color: transparent;
   border-bottom: 2px $main-color solid;
   text-align: start;
+  cursor: pointer;
 
   & h3 {
     font-size: $header-xs;
@@ -21,10 +22,10 @@
 
 .icon {
   align-self: center;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   margin-right: $space-m;
   color: $main-color;
 }

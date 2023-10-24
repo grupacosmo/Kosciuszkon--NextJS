@@ -1,74 +1,46 @@
 'use client';
 
-import { useState } from 'react';
-import { Icon } from '@iconify/react';
-import { scheduleData } from './data';
+import { type ReactElement, useState } from 'react';
+import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
+import { ScheduleTable } from '../../components';
 import classes from './Schedule.module.scss';
+import { scheduleData } from './data';
 
-type Schedule = {
-  title: string;
-  time: string;
-  description: string;
-};
-
-const ScheduleElement = ({ title, time, description }: Schedule) => {
-  return (
-    <div className={classes['schedule__element']}>
-      <div>{title}</div>
-      <div>{time}</div>
-      <div>{description}</div>
-    </div>
-  );
-};
-
-export function Schedule() {
-  const [scheduleType, setScheduleType] = useState('hackathon');
-
-  const handleScheduleTypeChange = () => {
-    if (scheduleType === 'hackathon') {
-      setScheduleType('workshop');
-    } else {
-      setScheduleType('hackathon');
-    }
-  };
+export function Schedule(): ReactElement {
+  const [isHackathon, setIsHackathon] = useState<boolean>(true);
 
   return (
-    <div  className={classes['schedule']}>
-      <div className={classes['schedule__controls']}>
-        <div onClick={handleScheduleTypeChange}>
-          <Icon icon='material-symbols:arrow-left-sharp' />
-        </div>
-        <div>{scheduleType === 'hackathon' ? 'Hackathon' : 'Warsztaty'}</div>
-        <div onClick={handleScheduleTypeChange}>
-          <Icon icon='material-symbols:arrow-right-sharp' />
-        </div>
+    <section className={classes.schedule}>
+      <div className={classes.controls}>
+        <button
+          onClick={() => setIsHackathon((state) => !state)}
+          aria-label='Zmień rodzaj harmonogramu'
+        >
+          <BiCaretLeft className={classes.icon} />
+        </button>
+        <h2>{isHackathon ? 'Hackathon' : 'Warsztaty'}</h2>
+        <button
+          onClick={() => setIsHackathon((state) => !state)}
+          aria-label='Zmień rodzaj harmonogramu'
+        >
+          <BiCaretRight className={classes.icon} />
+        </button>
       </div>
-      <div className={classes['schedule__schedule']}>
-        <div>
-          <div>Niedziela</div>
-          <div>
-            {scheduleType === 'hackathon'
-              ? scheduleData.hackathon.sunday.map(({ id, ...restProps }) => (
-                  <ScheduleElement key={id} {...restProps} />
-                ))
-              : scheduleData.workshop.sunday.map(({ id, ...restProps }) => (
-                  <ScheduleElement key={id} {...restProps} />
-                ))}
-          </div>
-        </div>
-        <div>
-          <div>Poniedziałek</div>
-          <div>
-            {scheduleType === 'hackathon'
-              ? scheduleData.hackathon.monday.map(({ id, ...restProps }) => (
-                  <ScheduleElement key={id} {...restProps} />
-                ))
-              : scheduleData.workshop.monday.map(({ id, ...restProps }) => (
-                  <ScheduleElement key={id} {...restProps} />
-                ))}
-          </div>
-        </div>
-      </div>
-    </div>
+      {isHackathon ? (
+        <ScheduleTable
+          firstTitle='Niedziela'
+          firstArray={scheduleData.hackathon.sunday}
+          secondTitle='Poniedziałek'
+          secondArray={scheduleData.hackathon.monday}
+        />
+      ) : (
+        <ScheduleTable
+          firstTitle='Niedziela'
+          firstArray={scheduleData.workshop.sunday}
+          secondTitle='Poniedziałek'
+          secondArray={scheduleData.workshop.monday}
+        />
+      )}
+    </section>
   );
 }

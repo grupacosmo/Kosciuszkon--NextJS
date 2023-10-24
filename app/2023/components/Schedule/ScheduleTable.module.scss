@@ -1,0 +1,45 @@
+@import '@/styles/abstracts/2023/variables.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 350px;
+  margin-bottom: $space-xxl;
+
+  h3 {
+    margin-bottom: $space-s;
+    text-align: center;
+    font-size: $header-l;
+  }
+
+  article {
+    padding: 0 $space-s;
+  }
+
+  & > article:first-child {
+    border-right: 2px solid $color-main;
+  }
+}
+
+@media only screen and (max-width: $bp-desktop) {
+  .container {
+    grid-template-columns: 1fr;
+
+    article {
+      margin: $space-xl 0;
+      padding: 0;
+    }
+
+    & > article:first-child {
+      border-right: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+  .container {
+    h3 {
+      font-size: $header-m;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useState, type ReactElement } from 'react';
 import clsx from 'clsx';
-import { BsFillCaretRightFill } from 'react-icons/bs';
+import { BiCaretRight } from 'react-icons/bi';
 import styles from './Collapsible.module.scss';
 
 type CollapsibleProps = {
@@ -21,7 +21,7 @@ export function Collapsible({ title, text }: CollapsibleProps): ReactElement {
         className={styles.button}
         onClick={() => setIsOpen((state) => !state)}
       >
-        <BsFillCaretRightFill className={iconClassNames} />
+        <BiCaretRight className={iconClassNames} />
         <h3>{title}</h3>
       </button>
       {isOpen && (

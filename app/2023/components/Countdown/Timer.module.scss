@@ -15,7 +15,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 260px;
+  width: auto;
   display: flex;
   justify-content: start;
   font-size: $header-l;
@@ -37,13 +37,12 @@
   }
 
   .timer {
-    width: 170px;
     font-size: $header-s;
-  
+
     &Colon {
       font-size: $header-l;
     }
-  
+
     span {
       padding: 0 $space-xs;
     }

@@ -22,7 +22,7 @@ export const scheduleData = {
       {
         id: '4',
         title: 'Początek kodowania',
-        time: '15:00',
+        time: '  15:00',
         description: '',
       },
       {
@@ -90,7 +90,7 @@ export const scheduleData = {
       {
         id: '15',
         title: 'Quiz programistyczno-matematyczny (dla chętnych)',
-        time: '19:00 - ',
+        time: '  19:00',
         description: '',
       },
     ],
