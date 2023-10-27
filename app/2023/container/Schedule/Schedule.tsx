@@ -12,18 +12,18 @@ export function Schedule(): ReactElement {
   return (
     <section className={classes.schedule}>
       <div className={classes.controls}>
-        <button
-          onClick={() => setIsHackathon((state) => !state)}
-          aria-label='Zmień rodzaj harmonogramu'
-        >
-          <BiCaretLeft className={classes.icon} />
+        <button onClick={() => setIsHackathon((state) => !state)}>
+          <BiCaretLeft
+            className={classes.icon}
+            aria-label='Zmień rodzaj harmonogramu'
+          />
         </button>
         <h2>{isHackathon ? 'Hackathon' : 'Warsztaty'}</h2>
-        <button
-          onClick={() => setIsHackathon((state) => !state)}
-          aria-label='Zmień rodzaj harmonogramu'
-        >
-          <BiCaretRight className={classes.icon} />
+        <button onClick={() => setIsHackathon((state) => !state)}>
+          <BiCaretRight
+            className={classes.icon}
+            aria-label='Zmień rodzaj harmonogramu'
+          />
         </button>
       </div>
       {isHackathon ? (

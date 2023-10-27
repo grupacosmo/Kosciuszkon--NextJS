@@ -1,177 +1,112 @@
 @import '@/styles/abstracts/2023/variables.scss';
 
-.topic {
+.section {
   position: relative;
   width: 100%;
-  min-height: 56rem;
-  display: block;
-  grid-template-columns: 48rem 1fr;
+  height: 720px;
+  margin: $space-h 0;
+  display: flex;
+  flex-direction: column;
+}
 
-  &__info {
-    position: absolute;
-    width: 48rem;
-    z-index: 1000;
+.info {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 420px;
+  height: 420px;
+  display: flex;
 
-    svg {
-      position: absolute;
-      width: 64rem;
-      top: calc(-0.05 * 64rem);
-      left: calc(-0.3 * 64rem);
-    }
+  &Bcg {
+    width: 100%;
+    height: 100%;
   }
 
-  article {
-    position: relative;
-    z-index: 1000;
-    text-align: justify;
+  &Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 320px;
+    padding-left: $space-m;
 
     h2 {
-      font-size: $header-s;
-      padding: 3.2rem 1.6rem;
-    }
-
-    p {
-      font-size: $font-m;
-      padding: 0 1rem;
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      clear: both;
+      font-size: $header-m;
+      margin-bottom: $space-m;
     }
   }
+}
 
-  &__article-mask {
-    float: right;
-    shape-margin: 0.8rem;
-    shape-outside: polygon(
-      0 0,
-      19.2rem 0,
-      19.2rem 54.4rem,
-      0 54.4rem,
-      14.4rem 27.2rem
-    );
-    height: 56rem;
-    width: 20.8rem;
+.sliderDots {
+  left: calc(50% + 210px);
+}
+
+.prevSlideButton {
+  left: calc(5% + 420px);
+}
+
+@media only screen and (max-width: $bp-desktop) {
+  .section {
+    height: 800px;
   }
 
-  &__slide {
-    height: 100%;
-    color: white;
-    padding: 0 15vw;
-    padding-top: 1.6rem;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  .info {
+    top: 22%;
+    width: 320px;
+    height: 320px;
 
-    a {
-      color: $main-color;
-    }
-    
-    div {
-      width: 90ch;
-      background-color: rgba(0, 0, 0, 0.6);
-      
+    &Text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 264px;
+      height: 300px;
+      padding-left: $space-s;
+
       h2 {
         font-size: $header-s;
-        text-align: center;
+        margin: $space-s 0;
       }
-    
+
       p {
-        font-size: $font-m;
-        text-align: left;
+        font-size: $font-s;
       }
     }
   }
-}
 
-@media only screen and (max-width: 1100px) {
-  .topic {
-    &__slide {
-      padding: 0 3.2rem;
-    }
+  .nextSlideButton {
+    top: 75%;
+    left: 95%;
+  }
+
+  .prevSlideButton {
+    top: 75%;
+    left: 5%;
+  }
+
+  .sliderDots {
+    left: 50%;
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .topic {
-    grid-template-columns: 100%;
-
-    &__info {
-      width: 56rem;
-      height: 51.2rem;
-
-      article {
-        width: 44.8rem;
-      }
-
-      svg {
-        width: 56rem;
-        top: calc(-0.05 * 56rem);
-        left: calc(-0.3 * 56rem);
-      }
-    }
-    &__article-mask {
-      shape-outside: polygon(
-        0 0,
-        19.2rem 0,
-        19.2rem 44.8rem,
-        0 44.8rem,
-        12.8rem 26.4rem
-      );
-      height: 44.8rem;
-    }
-    .carousel-root {
-      width: 100%;
-      height: 100%;
-    }
-
-    .control-dots {
-      display: none;
-    }
+@media only screen and (max-width: $bp-mobile) {
+  .section {
+    height: 900px;
   }
-}
 
-@media only screen and (min-width: 800px) {
-  .topic {
-    display: block;
-    position: relative;
+  .nextSlideButton {
+    top: 95%;
+    left: 90%;
+    height: unset;
+    background-color: unset;
+  }
 
-    &__info {
-      width: 48rem;
-      z-index: 1000;
-      height: 55.4rem;
-    }
-
-    .carousel-root {
-      position: absolute;
-      top: 1.1rem;
-      left: 0;
-      right: 0;
-      width: 100%;
-    }
-
-    &__slide {
-      padding-left: 59.2rem;
-    }
-
-    .control-next {
-      width: 30%;
-
-      &::before {
-        transform: translateX(6.4rem);
-      }
-    }
-
-    .control-prev {
-      width: calc(30% + 35.2rem);
-
-      &::before {
-        transform: translateX(6.4rem);
-      }
-    }
+  .prevSlideButton {
+    top: 95%;
+    left: 10%;
+    height: unset;
+    background-color: unset;
   }
 }

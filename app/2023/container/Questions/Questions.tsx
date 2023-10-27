@@ -8,7 +8,7 @@ import { questionsData } from './data';
 export function Questions(): ReactElement {
   return (
     <section className={styles.section}>
-      <Countdown startDate='2023-10-22T11:00:00' endDate='2023-10-24T15:00:00' />
+      <Countdown startDate='2023-10-25T11:00:00' endDate='2023-10-25T15:00:00' />
 
       <article className={styles.linksContainer}>
         <HexagonLink
