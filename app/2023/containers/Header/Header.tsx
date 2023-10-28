@@ -1,52 +1,57 @@
 'use client';
 
 import { useState, type ReactElement } from 'react';
-import { MenuItems } from './components/MenuItem';
-import classes from './Header.module.scss';
+import Link from 'next/link';
+import clsx from 'clsx';
+import { BiMenu } from 'react-icons/bi';
+import { MenuItem } from './components/MenuItem';
+import { localLinks } from './data';
+import styles from './Header.module.scss';
+import style from './components/MenuItem.module.scss';
 
 export function Header(): ReactElement {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleClick = () => {
+  const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
+  const mobileMenuClassNames = clsx(styles.mobileNav, {
+    [styles.menuOpen]: isMenuOpen,
+  });
+
   return (
-    <div className={classes['header__wrapper']}>
-      <nav className={classes['header']}>
-        <ul className={classes['header__menu--desktop']}>
-          <MenuItems handleClick={handleClick} />
+    <header className={styles.section}>
+      <nav className={styles.nav}>
+        <ul className={styles.navList}>
+          {localLinks.map((link) => (
+            <MenuItem key={link.id} onClick={closeMenu} {...link} />
+          ))}
+          <Link className={style.link} href='/'>
+            Obecna edcja
+          </Link>
         </ul>
-        <span
-          className={classes['header__menu--mobile']}
+
+        <button
+          className={styles.navButton}
           onClick={() => {
-            setIsMenuOpen((prev) => !prev);
+            setIsMenuOpen((state) => !state);
           }}
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='1.6rem'
-            height='1.6rem'
-            preserveAspectRatio='xMidYMid meet'
-            viewBox='0 0 512 512'
-          >
-            <path
-              fill='white'
-              d='M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z'
-            />
-          </svg>
-        </span>
+          <BiMenu aria-label='Menu' />
+        </button>
       </nav>
-      <nav
-        className={
-          classes['header__hamburger-menu'] +
-          ` ${isMenuOpen && classes['open']}`
-        }
-      >
-        <ul className={classes['header__navigation']}>
-          <MenuItems handleClick={handleClick} />
+
+      <nav className={mobileMenuClassNames}>
+        <ul className={styles.mobileNavList}>
+          {localLinks.map((link) => (
+            <MenuItem key={link.id} onClick={closeMenu} {...link} />
+          ))}
+          <Link className={style.link} href='/'>
+            Obecna edcja
+          </Link>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }

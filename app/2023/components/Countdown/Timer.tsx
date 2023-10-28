@@ -18,7 +18,7 @@ export default function Timer({ time }: TimerProps): ReactElement {
   if (!time) {
     return (
       <div className={styles.container}>
-        <div className={styles.timer} suppressHydrationWarning>
+        <div className={styles.timer} >
           <span>00</span>
           <span>:</span>
           <span>00</span>

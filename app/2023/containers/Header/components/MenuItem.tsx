@@ -1,45 +1,26 @@
-'use client'
+'use client';
 
-import classes from './MenuItem.module.scss'
+import { type ReactElement } from 'react';
+import styles from './MenuItem.module.scss';
 
-interface MenuItemProps {
-  handleClick: () => void;
-}
+type MenuItemProps = {
+  href: string;
+  label: string;
+  onClick: () => void;
+};
 
-export function MenuItems({ handleClick }: MenuItemProps) {
+export function MenuItem({
+  href,
+  label,
+  onClick,
+}: MenuItemProps): ReactElement {
   return (
     <>
       <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#o wydarzeniu'>
-          O wydarzeniu
-        </a>
-      </li>
-      <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#tematy'>
-          Tematy turnieju
-        </a>
-      </li>
-      <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#harmonogram'>
-          Harmonogram
-        </a>
-      </li>
-      <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#zapisy'>
-          Zapisy
-        </a>
-      </li>
-      <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#partnerzy'>
-          Partnerzy
-        </a>
-      </li>
-      <li>
-        <a className={classes['header__navigation-link']} onClick={handleClick} href='#kontakt'>
-          Kontakt
+        <a className={styles.link} onClick={onClick} href={href}>
+          {label}
         </a>
       </li>
     </>
   );
 }
-
