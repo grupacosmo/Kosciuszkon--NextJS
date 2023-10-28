@@ -16,6 +16,11 @@
     padding-top: $space-xl;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include maxWidth($bp-desktop) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &Background {
@@ -27,6 +32,16 @@
     bottom: 0;
     transform: skew(-20deg);
     background-color: $color-main;
+
+    @include maxWidth($bp-desktop) {
+      left: -8vh;
+      right: -4vh;
+    }
+
+    @include maxWidth($bp-mobile) {
+      left: -25vh;
+      right: -22vh;
+    }
   }
 
   h3 {
@@ -61,10 +76,21 @@
   flex-direction: column;
   justify-content: center;
 
+  @include maxWidth($bp-desktop) {
+    padding-left: 0;
+    padding-bottom: $space-xl;
+  }
+
   &List {
+    margin-right: $space-s;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    @include maxWidth($bp-mobile) {
+      grid-template-columns: 1fr;
+      row-gap: $space-xl;
+    }
   }
 
   &Item {
@@ -83,12 +109,31 @@
   position: relative;
   z-index: 2;
   height: 100%;
-
   border-right: 2px solid black;
   border-left: 2px solid black;
 
+  @include maxWidth($bp-desktop) {
+    width: 100%;
+    max-width: 432px;
+    padding: $space-xl 0;
+    display: grid;
+    justify-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: none;
+    border-left: none;
+  }
+
+  @include maxWidth($bp-mobile) {
+    width: auto;
+  }
+
   &List {
     padding-left: $space-h;
+
+    @include maxWidth($bp-desktop) {
+      padding-left: 0;
+    }
   }
 
   &Button {
@@ -100,6 +145,10 @@
     border-radius: $radius-h;
     background-color: $color-background;
     cursor: pointer;
+
+    @include maxWidth($bp-desktop) {
+      margin-top: $space-xl;
+    }
 
     svg {
       height: 1.6rem;
@@ -123,11 +172,27 @@
   z-index: 2;
   height: 100%;
 
+  @include maxWidth($bp-desktop) {
+    padding: $space-xl 0;
+  }
+
   &Container {
     padding-left: $space-h;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
+
+    @include maxWidth($bp-desktop) {
+      padding-left: 0;
+      column-gap: $space-h;
+    }
+
+    @include maxWidth($bp-mobile) {
+      grid-template-columns: 1fr;
+      align-items: center;
+      row-gap: $space-xl;
+      padding-left: $space-xxl;
+    }
   }
 }
 
@@ -140,76 +205,4 @@
   font-size: $header-xs;
   color: $color-main;
   background-color: $color-background;
-}
-
-@media only screen and (max-width: $bp-desktop) {
-  .footer {
-    &Container {
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
-
-    &Background {
-      left: -8vh;
-      right: -4vh;
-    }
-  }
-
-  .visit {
-    padding: 0;
-    padding-bottom: $space-xl;
-  }
-
-  .contact {
-    padding: $space-xl 0;
-    width: 80%;
-    display: grid;
-    justify-items: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: none;
-    border-left: none;
-
-    &List {
-      padding-left: 0;
-    }
-
-    &Button {
-      margin-top: $space-xl;
-    }
-  }
-
-  .links {
-    padding: $space-xl 0;
-
-    &Container {
-      padding-left: 0;
-      column-gap: $space-h;
-    }
-  }
-}
-
-@media only screen and (max-width: $bp-mobile) {
-  .footer {
-    &Background {
-      left: -25vh;
-      right: -22vh;
-    }
-  }
-
-  .visit {
-    &List {
-      grid-template-columns: 1fr;
-      row-gap: $space-xl;
-    }
-  }
-
-  .links {
-    &Container {
-      grid-template-columns: 1fr;
-      align-items: center;
-      row-gap: $space-xl;
-      padding-left: $space-xxl;
-    }
-  }
 }

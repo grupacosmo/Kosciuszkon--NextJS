@@ -1,7 +1,7 @@
-import kwadrat from '@/public/2023/kwadrat.webp';
-import wrss from '@/public/2023/wrss.webp';
-import fundacja from '@/public/2023/fundacja.webp';
-import cosmo from '@/public/2023/cosmo.svg';
+import kwadrat from '@/app/2023/assets/img/visit/kwadrat.png';
+import wrss from '@/app/2023/assets/img/visit/wrss.png';
+import fundacja from '@/app/2023/assets/img/visit/fundacja.png';
+import cosmo from '@/app/2023/assets/img/visit/cosmo.png';
 
 import {
   FaFacebookF,

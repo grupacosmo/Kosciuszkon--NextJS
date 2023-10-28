@@ -2,7 +2,8 @@
 
 import { type ReactElement, useState } from 'react';
 import { FaLocationDot } from 'react-icons/fa6';
-import { FooterLinks, FooterContacts } from '../../components';
+import { FooterContacts } from './components/FooterContact';
+import { FooterLinks } from './components/FooterLinks';
 import styles from './Footer.module.scss';
 
 import {
