@@ -2,13 +2,13 @@
 
 import { type ReactElement, useState } from 'react';
 import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
-import { Item, SliderItem } from './SliderItem';
+import { SlideData, SingleSlide } from './SliderItem';
 import { SliderDot } from './SliderDot';
 import styles from './Slider.module.scss';
 import clsx from 'clsx';
 
 type SliderProps = {
-  items: Item[];
+  slides: SlideData[];
   render: (content: any) => ReactElement | null;
   hasGrayscale?: boolean;
   containerClassName?: string;
@@ -19,7 +19,7 @@ type SliderProps = {
 };
 
 export function Slider({
-  items,
+  slides,
   render,
   hasGrayscale = false,
   containerClassName,
@@ -30,11 +30,11 @@ export function Slider({
 }: SliderProps): ReactElement | null {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  if (!items.length) {
+  if (!slides.length) {
     return null;
   }
 
-  const sliderSize = items.length;
+  const sliderSize = slides.length;
 
   const nextSlide = () => {
     if (activeIndex === sliderSize - 1) {
@@ -63,10 +63,10 @@ export function Slider({
 
   return (
     <section className={containerClassNames}>
-      {items.map((item, index) => (
-        <SliderItem
-          key={item.slide.id}
-          item={item}
+      {slides.map((slide, index) => (
+        <SingleSlide
+          key={slide.id}
+          slide={slide}
           render={render}
           isActive={index === activeIndex}
         />
@@ -81,9 +81,9 @@ export function Slider({
       </button>
 
       <div className={dotsClassNames}>
-        {items.map((_, index) => (
+        {slides.map((slide, index) => (
           <SliderDot
-            key={index}
+            key={slide.id}
             index={index}
             isActive={index === activeIndex}
             className={dotButtonClassName}

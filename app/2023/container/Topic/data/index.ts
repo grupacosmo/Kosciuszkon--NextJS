@@ -5,8 +5,8 @@ import prelekcja_2 from '@/public/2023/backgrounds/prelekcje2.webp';
 
 export const sliderContent = [
   {
+    id: '1',
     slide: {
-      id: '1',
       src: kwadrat,
       alt: 'Budynek w którym mieści się studio kwadrat.',
     },
@@ -23,8 +23,8 @@ export const sliderContent = [
     },
   },
   {
+    id: '2',
     slide: {
-      id: '2',
       src: kodowanie,
       alt: 'Uczestnicy heckathonu, którzy piszą kod.',
     },
@@ -40,8 +40,8 @@ export const sliderContent = [
     },
   },
   {
+    id: '3',
     slide: {
-      id: '3',
       src: prelekcja_1,
       alt: 'Sala wykładowa.',
     },
@@ -58,8 +58,8 @@ export const sliderContent = [
     },
   },
   {
+    id: '4',
     slide: {
-      id: '4',
       src: prelekcja_2,
       alt: 'Sala wykładowa.',
     },

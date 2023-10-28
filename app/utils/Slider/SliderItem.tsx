@@ -2,37 +2,39 @@ import { type ReactElement } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import styles from './SliderItem.module.scss';
 
-type Slide = {
-  id: string;
+type SlideImage = {
   src: StaticImageData;
   alt: string;
 };
 
-export type Item = {
-  slide: Slide;
+export type SlideData = {
+  id: string;
+  image?: SlideImage;
   content: any;
 };
 
-type SlideItem = {
-  item: Item;
+type SingleSlideProps = {
+  slide: SlideData;
   render: (content: any) => ReactElement | null;
   isActive: boolean;
 };
 
-export function SliderItem({
-  item: { slide, content },
+export function SingleSlide({
+  slide: { image, content },
   render,
   isActive,
-}: SlideItem): ReactElement | null {
+}: SingleSlideProps): ReactElement | null {
   if (!isActive) {
     return null;
   }
 
   return (
     <article className={styles.slide}>
-      <picture>
-        <Image src={slide.src} alt={slide.alt} />
-      </picture>
+      {image && (
+        <picture className={styles.slidePicture}>
+          <Image className={styles.slideImg} src={image.src} alt={image.alt} />
+        </picture>
+      )}
       {render(content)}
     </article>
   );
