@@ -1,13 +1,13 @@
 import {
   Header,
   Hero,
-  Topic,
+  Informations,
   TopicList,
   Schedule,
   Questions,
   Partners,
   Footer,
-} from './2023/container';
+} from './2023/containers';
 import { SectionDivider, SectionGradient } from './2023/components';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <SectionDivider name='o wydarzeniu' />
-      <Topic />
+      <Informations />
       <SectionGradient />
       <SectionDivider name='tematy' />
       <TopicList />

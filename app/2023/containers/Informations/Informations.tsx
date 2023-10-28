@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { Slider } from '@/app/utils/';
 import { SlideContent } from './components/SlideContent';
 import { sliderContent } from './data';
-import styles from './Topic.module.scss';
+import styles from './Informations.module.scss';
 
 import pentagon from '../../assets/svg/pentagon.svg';
 
-export function Topic(): ReactElement {
+export function Informations(): ReactElement {
   return (
     <section className={styles.section}>
       <div className={styles.info}>
@@ -35,7 +35,7 @@ export function Topic(): ReactElement {
 
       <Slider
         render={SlideContent}
-        items={sliderContent}
+        slides={sliderContent}
         hasGrayscale
         nextButtonClassName={styles.nextSlideButton}
         prevButtonClassName={styles.prevSlideButton}

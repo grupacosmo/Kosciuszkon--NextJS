@@ -1,6 +1,6 @@
 export { Header } from './Header/Header';
 export { Hero } from './Hero/Hero';
-export { Topic } from './Topic/Topic';
+export { Informations } from './Informations/Informations';
 export { TopicList } from './TopicList/TopicList';
 export { Schedule } from './Schedule/Schedule';
 export { Questions } from './Questions/Questions';
