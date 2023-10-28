@@ -31,7 +31,7 @@ export function Countdown({
   if (startTime < 0 && endTime < 0) {
     return (
       <article className={styles.countdown}>
-        <h3>Wudarzenie zakończone</h3>
+        <h3>Wydarzenie zakończone</h3>
         <Timer time={null} />
       </article>
     );
