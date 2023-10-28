@@ -7,8 +7,9 @@ import {
   Questions,
   Partners,
   Footer,
+  SectionDivider,
+  SectionGradient,
 } from './2023/containers';
-import { SectionDivider, SectionGradient } from './2023/components';
 
 export default function Home() {
   return (
