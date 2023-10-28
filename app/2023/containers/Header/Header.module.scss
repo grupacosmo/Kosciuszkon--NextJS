@@ -2,8 +2,8 @@
 
 .header {
     
-    background-color: $background-color-1;
-    border-bottom: 4px solid $main-color;
+    background-color: $color-black;
+    border-bottom: 4px solid $color-main;
     text-align: right;
     min-height: 1.6rem;
     display: block;
@@ -18,8 +18,8 @@
         }
 
         transition: .3s;
-        background-color: $background-color-1;
-        border-bottom: 4px solid $main-color;
+        background-color: $color-black;
+        border-bottom: 4px solid $color-main;
         text-align: center;
         position: absolute;
         left: 0;
@@ -50,12 +50,12 @@
             padding: 0 1.6rem;
             a {
                 font-size: $font-m;
-                color: $text-color-1;
+                color: $color-white;
                 text-decoration: none;
                 transition: .3s;
 
                 &:hover {
-                    color: $main-color;
+                    color: $color-main;
                 }
             }
         }
@@ -73,7 +73,7 @@
             
             &:hover {
                 path {
-                    fill: $main-color;
+                    fill: $color-main;
                 }
             }
         }

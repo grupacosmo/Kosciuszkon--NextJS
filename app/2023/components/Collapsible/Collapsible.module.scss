@@ -10,13 +10,13 @@
   padding: $space-s 0;
   border: none;
   background-color: transparent;
-  border-bottom: 2px $main-color solid;
+  border-bottom: 2px $color-main solid;
   text-align: start;
   cursor: pointer;
 
   & h3 {
     font-size: $header-xs;
-    color: $main-color;
+    color: $color-main;
   }
 }
 
@@ -27,7 +27,7 @@
   min-width: 24px;
   min-height: 24px;
   margin-right: $space-m;
-  color: $main-color;
+  color: $color-main ;
 }
 
 .iconDown {

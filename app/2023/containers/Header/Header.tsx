@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type ReactElement } from 'react';
-import { MenuItems } from '../../components';
+import { MenuItems } from './components/MenuItem';
 import classes from './Header.module.scss';
 
 export function Header(): ReactElement {
