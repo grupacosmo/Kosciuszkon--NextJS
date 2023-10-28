@@ -4,7 +4,7 @@ import { type IconType } from 'react-icons';
 import clsx from 'clsx';
 import styles from './HexagonLink.module.scss';
 
-import hex from '../../assets/svg/hex.svg';
+import hex from '../../assets/svg/hex-64.svg';
 
 type HexagonLinkProps = {
   id: string;

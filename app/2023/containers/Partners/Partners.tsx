@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react';
 import clsx from 'clsx';
-import { PartnersGrid } from '../../components';
+import { PartnersGrid } from './components/PartnersGrid';
 import styles from './Partners.module.scss';
 
 import {

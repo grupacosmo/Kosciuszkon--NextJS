@@ -1,31 +1,31 @@
 // honorary partners
-import fut from '@/public/2023/partners/media/fut.png';
-import pk from '@/public/2023/partners/media/pk.png';
-import wiit from '@/public/2023/partners/media/wiit.png';
+import fut from '@/app/2023/assets/img/media/fut.png';
+import pk from '@/app/2023/assets/img/media/pk.png';
+import wiit from '@/app/2023/assets/img/media/wiit.png';
 
 // gold partner
-import sabre from '@/public/2023/partners/tech/sabre.png';
+import sabre from '@/app/2023/assets/img/tech/sabre.png';
 
 // silver partners
-import hitachi from '@/public/2023/partners/tech/hitachi.png';
-import softserve from '@/public/2023/partners/tech/softserve.png';
-import onwelo from '@/public/2023/partners/tech/onwelo.png';
-import ibm from '@/public/2023/partners/tech/ibm.png';
+import hitachi from '@/app/2023/assets/img/tech/hitachi.png';
+import softserve from '@/app/2023/assets/img/tech/softserve.png';
+import onwelo from '@/app/2023/assets/img/tech/onwelo.png';
+import ibm from '@/app/2023/assets/img/tech/ibm.png';
 
 // event partners
-import itechart from '@/public/2023/partners/tech/itechart.png';
-import makarun from '@/public/2023/partners/media/makarun.png';
-import ericsson from '@/public/2023/partners/tech/ericsson.png';
-import dagrasso from '@/public/2023/partners/media/dagrasso.png';
+import itechart from '@/app/2023/assets/img/tech/itechart.png';
+import makarun from '@/app/2023/assets/img/media/makarun.png';
+import ericsson from '@/app/2023/assets/img/tech/ericsson.png';
+import dagrasso from '@/app/2023/assets/img/media/dagrasso.png';
 
 // media partners
-import forprogrammers from '@/public/2023/partners/tech/4programmers.png';
-import crossweb from '@/public/2023/partners/media/crossweb.png';
-import solidjobs from '@/public/2023/partners/media/solidjobs.png';
-import studentnews from '@/public/2023/partners/media/studentnews.png';
-import kms from '@/public/2023/partners/media/kms.png';
-import futurelab from '@/public/2023/partners/media/futurelab.png';
-import itleaders from '@/public/2023/partners/media/itleaders.png';
+import forprogrammers from '@/app/2023/assets/img/tech/4programmers.png';
+import crossweb from '@/app/2023/assets/img/media/crossweb.png';
+import solidjobs from '@/app/2023/assets/img/media/solidjobs.png';
+import studentnews from '@/app/2023/assets/img/media/studentnews.png';
+import kms from '@/app/2023/assets/img/media/kms.png';
+import futurelab from '@/app/2023/assets/img/media/futurelab.png';
+import itleaders from '@/app/2023/assets/img/media/itleaders.png';
 
 export const honoraryPartnerData = [
   {

@@ -56,3 +56,7 @@ $space-xh: 12.4rem; // 124px
     @content;
   }
 }
+
+@include maxWidth($bp-desktop) {}
+@include maxWidth($bp-tablet) {}
+@include maxWidth($bp-mobile) {}

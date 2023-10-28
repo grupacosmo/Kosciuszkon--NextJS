@@ -2,7 +2,7 @@ import { type ReactElement } from 'react';
 import Image from 'next/image';
 import styles from './Timer.module.scss';
 
-import hex from '../../assets/svg/hex186x43.svg';
+import hex from '../../assets/svg/hex-timer.svg';
 import { padZero } from './utils';
 
 const DAY_IN_SECONDS = 86400;

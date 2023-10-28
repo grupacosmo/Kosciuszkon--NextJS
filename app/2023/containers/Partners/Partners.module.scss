@@ -18,6 +18,11 @@
   padding: $space-xl 0;
   grid-template-columns: 1fr 1fr 1fr;
 
+  @include maxWidth($bp-tablet) {
+    grid-template-columns: 1fr;
+    row-gap: $space-xl;
+  }
+
   img {
     width: 272px;
     height: auto;
@@ -31,11 +36,24 @@
   img {
     width: 544px;
     height: auto;
+
+    @include maxWidth($bp-mobile) {
+      width: 272px;
+      height: auto;
+    }
   }
 }
 
 .silverPartnerGrid {
   grid-template-columns: 1fr 1fr 1fr;
+
+  @include maxWidth($bp-tablet) {
+    grid-template-columns: 1fr;
+
+    div:nth-child(3n) {
+      padding-top: $space-h;
+    }
+  }
 
   div:first-child {
     img {
@@ -55,11 +73,33 @@
   img {
     width: 232px;
     height: auto;
+
+    @include maxWidth($bp-tablet) {
+      margin-top: 0;
+    }
   }
 }
 
 .eventPartnerGrid {
   grid-template-columns: repeat(5, 1fr);
+
+  @include maxWidth($bp-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include maxWidth($bp-tablet) {
+    padding-top: $space-h;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include maxWidth($bp-mobile) {
+    padding-top: $space-h;
+    grid-template-columns: repeat(1, 1fr);
+
+    div:first-of-type {
+      margin-bottom: $space-h;
+    }
+  }
 
   div:nth-child(2n + 1) {
     img {
@@ -88,6 +128,16 @@
   align-items: center;
   justify-content: center;
 
+  @include maxWidth($bp-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $space-xl;
+  }
+
+  @include maxWidth($bp-mobile) {
+    grid-template-columns: 1fr;
+    row-gap: $space-h;
+  }
+
   img {
     width: 272px;
     height: auto;
@@ -107,71 +157,13 @@
   align-items: center;
   justify-content: center;
 
+  @include maxWidth($bp-tablet) {
+    grid-template-columns: 1fr;
+    row-gap: $space-h;
+  }
+
   img {
     width: 272px;
     height: auto;
-  }
-}
-
-@media only screen and (max-width: $bp-desktop) {
-  .eventPartnerGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .mediaPartnerGridOne {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: $space-xl;
-  }
-}
-
-@media only screen and (max-width: $bp-tablet) {
-  .honoraryPartnerGrid {
-    grid-template-columns: 1fr;
-    row-gap: $space-xl;
-  }
-
-  .silverPartnerGrid {
-    grid-template-columns: 1fr;
-
-    img {
-      margin-top: 0;
-    }
-
-    div:nth-child(3n) {
-      padding-top: $space-h;
-    }
-  }
-
-  .eventPartnerGrid {
-    padding-top: $space-h;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .mediaPartnerGridTwo {
-    grid-template-columns: 1fr;
-    row-gap: $space-h;
-  }
-}
-
-@media only screen and (max-width: $bp-mobile) {
-  .goldPartnerGrid {
-    img {
-      width: 272px;
-      height: auto;
-    }
-  }
-
-  .eventPartnerGrid {
-    padding-top: $space-h;
-    grid-template-columns: repeat(1, 1fr);
-
-    div:first-of-type {
-      margin-bottom: $space-h;
-    }
-  }
-
-  .mediaPartnerGridOne {
-    grid-template-columns: 1fr;
-    row-gap: $space-h;
   }
 }
