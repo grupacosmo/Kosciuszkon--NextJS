@@ -1,7 +1,7 @@
-import kwadrat from '@/public/2023/backgrounds/kwadrat.png';
-import kodowanie from '@/public/2023/backgrounds/kodowanie.webp';
-import prelekcja_1 from '@/public/2023/backgrounds/prelekcje.jpg';
-import prelekcja_2 from '@/public/2023/backgrounds/prelekcje2.webp';
+import kwadrat from '@/app/2023/assets/img/bcg/kwadrat.jpg';
+import kodowanie from '@/app/2023/assets/img/bcg/kodowanie.jpg';
+import prelekcje from '@/app/2023/assets/img/bcg/prelekcje.jpg';
+import targi from '@/app/2023/assets/img/bcg/targi.jpg';
 
 export const sliderContent = [
   {
@@ -42,7 +42,7 @@ export const sliderContent = [
   {
     id: '3',
     image: {
-      src: prelekcja_1,
+      src: prelekcje,
       alt: 'Sala wykładowa.',
     },
     content: {
@@ -60,7 +60,7 @@ export const sliderContent = [
   {
     id: '4',
     image: {
-      src: prelekcja_2,
+      src: targi,
       alt: 'Sala wykładowa.',
     },
     content: {

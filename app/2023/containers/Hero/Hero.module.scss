@@ -17,6 +17,10 @@
   border-left: none;
   color: $color-white;
 
+  @include maxWidth($bp-mobile) {
+    width: 300px;
+  }
+
   &Background {
     z-index: 2;
     position: absolute;
@@ -37,6 +41,11 @@
     font-weight: 600;
     font-size: $header-xh;
     color: $color-main;
+
+    @include maxWidth($bp-mobile) {
+      font-size: $header-xl;
+      margin: $space-m $space-m;
+    }
   }
 
   p {
@@ -45,6 +54,11 @@
     margin: 0 $space-l;
     color: $color-white;
     font-size: $font-m;
+
+    @include maxWidth($bp-mobile) {
+      margin: 0 $space-m;
+      font-size: $font-s;
+    }
   }
 }
 
@@ -80,18 +94,4 @@
   background-size: auto 150px;
 }
 
-@media only screen and (max-width: $bp-mobile) {
-  .title {
-    width: 300px;
 
-    h1 {
-      font-size: $header-xl;
-      margin: $space-m $space-m;
-    }
-
-    p {
-      margin: 0 $space-m;
-      font-size: $font-s;
-    }
-  }
-}
