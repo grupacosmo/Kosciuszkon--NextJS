@@ -1,4 +1,4 @@
-import '@/styles/2024/main.scss';
+import '@/styles/2023/main.scss';
 
 export const metadata = {
   title: 'Kościuszkon - Hackathon WIiT PK - I Edycja',

@@ -1,9 +1,9 @@
-@import '@/styles/abstracts/2023/variables.scss';
+@import '@/styles/2023/variables.scss';
 
 .schedule {
   width: 90vw;
   min-height: 500px;
-  margin: $space-xl auto;
+  margin: $space-h auto;
 }
 
 .controls {
@@ -23,6 +23,12 @@
     font-size: $header-h;
     color: $color-main;
     text-align: center;
+
+    @include maxWidth($bp-mobile) {
+      width: 160px;
+      margin: 0 $space-l;
+      font-size: $header-l;
+    }
   }
 }
 
@@ -30,14 +36,4 @@
   width: 32px;
   height: 32px;
   transform: translateY(3px);
-}
-
-@media only screen and (max-width: 800px) {
-  .controls {
-    h2 {
-      width: 160px;
-      margin: 0 $space-l;
-      font-size: $header-l;
-    }
-  }
 }

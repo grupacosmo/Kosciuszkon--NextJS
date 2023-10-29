@@ -14,6 +14,10 @@
   font-size: $font-m;
   text-align: left;
 
+  @include maxWidth($bp-mobile) {
+    font-size: $font-s;
+  }
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }
@@ -23,13 +27,5 @@
     text-align: left;
   }
 
-  &Description {
-    color: $color-white;
-  }
 }
 
-@media only screen and (max-width: $bp-mobile) {
-  .element {
-    font-size: $font-s;
-  }
-}

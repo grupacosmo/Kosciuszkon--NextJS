@@ -25,7 +25,7 @@ export function Countdown({
     const interval = setInterval(() => {
       setStartTime((state) => state - 1);
       setEndTime((state) => state - 1);
-    }, 985);
+    }, 990);
 
     return () => clearInterval(interval);
   }, []);

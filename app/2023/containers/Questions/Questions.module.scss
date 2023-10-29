@@ -1,8 +1,8 @@
-@import '@/styles/abstracts/2023/variables.scss';
+@import '@/styles/2023/variables.scss';
 
 .section {
   width: 100%;
-  margin-top: $space-h;
+  margin: $space-h 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,8 @@
   &Container {
     max-width: 930px;
     width: 100%;
-    margin: $space-xl auto $space-h;
+    min-height: 540px;
+    margin: $space-xl auto 0;
     padding: 0 $space-l;
   }
 

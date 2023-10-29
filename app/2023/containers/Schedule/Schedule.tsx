@@ -2,9 +2,9 @@
 
 import { type ReactElement, useState } from 'react';
 import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
-import { ScheduleTable } from '../../components';
-import classes from './Schedule.module.scss';
+import { ScheduleTable } from './components/ScheduleTable';
 import { scheduleData } from './data';
+import classes from './Schedule.module.scss';
 
 export function Schedule(): ReactElement {
   const [isHackathon, setIsHackathon] = useState<boolean>(true);
