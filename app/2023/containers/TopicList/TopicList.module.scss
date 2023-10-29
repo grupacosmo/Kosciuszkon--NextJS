@@ -14,13 +14,15 @@
   align-self: center;
 }
 
-@media only screen and (max-width: $bp-mobile) {
-  .nextSlideButton {
+.nextSlideButton {
+  @include maxWidth($bp-mobile) {
     top: 95%;
     left: 85%;
   }
+}
 
-  .prevSlideButton {
+.prevSlideButton {
+  @include maxWidth($bp-mobile) {
     top: 95%;
     left: 15%;
   }
