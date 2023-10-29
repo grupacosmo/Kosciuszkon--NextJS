@@ -1,0 +1,208 @@
+@import '@/styles/2023/variables.scss';
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $space-l;
+  width: 100%;
+  min-height: 320px;
+  color: $color-black;
+
+  &Container {
+    width: 100vw;
+    height: 100%;
+    padding-top: $space-xl;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include maxWidth($bp-desktop) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &Background {
+    position: absolute;
+    z-index: 0;
+    left: -1vh;
+    top: 0;
+    right: 1vh;
+    bottom: 0;
+    transform: skew(-20deg);
+    background-color: $color-main;
+
+    @include maxWidth($bp-desktop) {
+      left: -8vh;
+      right: -4vh;
+    }
+
+    @include maxWidth($bp-mobile) {
+      left: -25vh;
+      right: -22vh;
+    }
+  }
+
+  h3 {
+    width: 100%;
+    margin-bottom: $space-xl;
+    text-align: center;
+    font-size: $header-m;
+    font-weight: 500;
+  }
+
+  li {
+    padding-bottom: $space-s;
+    font-size: $font-m;
+  }
+
+  a:hover {
+    color: $color-white;
+  }
+
+  svg {
+    margin-right: $space-s;
+    transform: translateY(2px);
+  }
+}
+
+.visit {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding-left: $space-h;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include maxWidth($bp-desktop) {
+    padding-left: 0;
+    padding-bottom: $space-xl;
+  }
+
+  &List {
+    margin-right: $space-s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    @include maxWidth($bp-mobile) {
+      grid-template-columns: 1fr;
+      row-gap: $space-xl;
+    }
+  }
+
+  &Item {
+    padding-left: $space-xl;
+
+    img {
+      height: auto;
+      width: auto;
+      max-height: 70px;
+      max-width: 180px;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+
+  @include maxWidth($bp-desktop) {
+    width: 100%;
+    max-width: 432px;
+    padding: $space-xl 0;
+    display: grid;
+    justify-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: none;
+    border-left: none;
+  }
+
+  @include maxWidth($bp-mobile) {
+    width: auto;
+  }
+
+  &List {
+    padding-left: $space-h;
+
+    @include maxWidth($bp-desktop) {
+      padding-left: 0;
+    }
+  }
+
+  &Button {
+    width: 120px;
+    margin: $space-m auto;
+    padding: $space-s $space-s;
+    display: flex;
+    border: 2px solid $color-background;
+    border-radius: $radius-h;
+    background-color: $color-background;
+    cursor: pointer;
+
+    @include maxWidth($bp-desktop) {
+      margin-top: $space-xl;
+    }
+
+    svg {
+      height: 1.6rem;
+      width: 1.6rem;
+      margin-right: $space-s;
+      transform: translateY(-1px);
+    }
+  }
+
+  &Button:hover {
+    border: 2px solid $color-white;
+  }
+
+  &Button:active {
+    transform: translateY(2px);
+  }
+}
+
+.links {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  @include maxWidth($bp-desktop) {
+    padding: $space-xl 0;
+  }
+
+  &Container {
+    padding-left: $space-h;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    @include maxWidth($bp-desktop) {
+      padding-left: 0;
+      column-gap: $space-h;
+    }
+
+    @include maxWidth($bp-mobile) {
+      grid-template-columns: 1fr;
+      align-items: center;
+      row-gap: $space-xl;
+      padding-left: $space-xxl;
+    }
+  }
+}
+
+.copyright {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: $space-m 0;
+  text-align: center;
+  font-size: $header-xs;
+  color: $color-main;
+  background-color: $color-background;
+}

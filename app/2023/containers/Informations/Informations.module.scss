@@ -1,0 +1,112 @@
+@import '@/styles/2023/variables.scss';
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  margin: $space-h 0;
+  display: flex;
+  flex-direction: column;
+
+  @include maxWidth($bp-desktop) {
+    height: 800px;
+  }
+
+  @include maxWidth($bp-mobile) {
+    height: 900px;
+  }
+}
+
+.info {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 420px;
+  height: 420px;
+  display: flex;
+
+  @include maxWidth($bp-desktop) {
+    top: 22%;
+    width: 320px;
+    height: 320px;
+  }
+
+  &Bcg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 320px;
+    padding-left: $space-m;
+
+    @include maxWidth($bp-desktop) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 264px;
+      height: 300px;
+      padding-left: $space-s;
+    }
+
+    h2 {
+      font-size: $header-m;
+      margin-bottom: $space-m;
+
+      @include maxWidth($bp-desktop) {
+        font-size: $header-s;
+        margin: $space-xs 0;
+      }
+    }
+
+    p {
+      @include maxWidth($bp-desktop) {
+        font-size: $font-s;
+      }
+    }
+  }
+}
+
+.sliderDots {
+  left: calc(50% + 210px);
+
+  @include maxWidth($bp-desktop) {
+    left: 50%;
+  }
+}
+
+.nextSlideButton {
+  @include maxWidth($bp-desktop) {
+    top: 75%;
+    left: 95%;
+  }
+
+  @include maxWidth($bp-mobile) {
+    top: 95%;
+    left: 90%;
+    height: unset;
+    background-color: unset;
+  }
+}
+
+.prevSlideButton {
+  left: calc(5% + 420px);
+
+  @include maxWidth($bp-desktop) {
+    top: 75%;
+    left: 5%;
+  }
+
+  @include maxWidth($bp-mobile) {
+    top: 95%;
+    left: 10%;
+    height: unset;
+    background-color: unset;
+  }
+}

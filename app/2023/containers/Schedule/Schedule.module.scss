@@ -1,0 +1,39 @@
+@import '@/styles/2023/variables.scss';
+
+.schedule {
+  width: 90vw;
+  min-height: 500px;
+  margin: $space-h auto;
+}
+
+.controls {
+  margin: $space-h auto;
+  display: flex;
+  justify-content: center;
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  h2 {
+    width: 200px;
+    margin: 0 $space-l;
+    font-size: $header-h;
+    color: $color-main;
+    text-align: center;
+
+    @include maxWidth($bp-mobile) {
+      width: 160px;
+      margin: 0 $space-l;
+      font-size: $header-l;
+    }
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  transform: translateY(3px);
+}

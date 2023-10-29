@@ -1,0 +1,31 @@
+@import '@/styles/2023/variables.scss';
+
+.element {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 1.1rem;
+  padding-top: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  font-size: $font-m;
+  text-align: left;
+
+  @include maxWidth($bp-mobile) {
+    font-size: $font-s;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  div {
+    color: $color-main;
+    text-align: left;
+  }
+
+}
+

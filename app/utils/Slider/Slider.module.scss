@@ -1,0 +1,63 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.nextButton,
+.prevButton {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.nextButton {
+  left: 95%;
+}
+
+.prevButton {
+  left: 5%;
+}
+
+.dots {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 950px) {
+  .nextButton,
+  .prevButton {
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .slider {
+    margin-bottom: 32px;
+  }
+
+  .nextButton,
+  .prevButton {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

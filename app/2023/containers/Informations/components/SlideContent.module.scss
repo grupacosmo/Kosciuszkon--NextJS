@@ -1,0 +1,52 @@
+@import '@/styles/2023/variables.scss';
+
+.slide {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: calc(50% + 210px);
+  transform: translate(-50%, -50%);
+  width: auto;
+  padding: $space-l $space-xl;
+  background-color: rgba($color-black, 0.7);
+
+  @include maxWidth($bp-desktop) {
+    bottom: 10%;
+    left: 50%;
+    transform: unset;
+    height: fit-content;
+    transform: translate(-50%, 25%);
+  }
+
+  @include maxWidth($bp-mobile) {
+    transform: translate(-50%, 10%);
+    width: 100%;
+    padding: $space-m $space-l;
+  }
+
+  h2 {
+    margin-bottom: $space-m;
+    text-align: center;
+    font-size: $header-m;
+
+    @include maxWidth($bp-desktop) {
+      font-size: $header-s;
+    }
+
+    @include maxWidth($bp-mobile) {
+      font-size: $header-xs;
+    }
+  }
+
+  p {
+    width: 48ch;
+    font-size: $font-m;
+
+    @include maxWidth($bp-mobile) {
+      width: 100%;
+      max-width: 48ch;
+      margin: 0 auto;
+      font-size: $font-s;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+//------------ COLOR VARIABLES - 2023 --------------//
+
+$color-main: #1eca94;
+$color-black: black;
+$color-white: white;
+$color-background: #262626;
+
+//------------ FONT VARIABLES --------------//
+
+$font-s: 1.4rem; // 14px
+$font-m: 1.6rem; // 16px
+$font-l: 1.8rem; // 18px
+$font-xl: 2rem; // 20px
+$font-xxl: 2.4rem; // 24px
+
+//------------ HEADER VARIABLES --------------//
+
+$header-xs: 2rem; // 20px
+$header-s: 2.4rem; // 24px
+$header-m: 2.8rem; // 28px
+$header-l: 3.2rem; // 32px
+$header-xl: 3.6rem; // 36px
+$header-h: 4rem; // 40px
+$header-xh: 4.8rem; // 48px
+
+//------------ RESPONSIVE BREAKPOINTS --------------//
+
+$bp-mobile: 630px; // 630px
+$bp-tablet: 950px; // 950px
+$bp-desktop: 1280px; // 1280px
+
+//------------ BORDER RADIUS --------------//
+
+$radius-s: 0.4rem; //4px
+$radius-m: 0.8rem; //8px
+$radius-l: 1.2rem; //12px
+$radius-xl: 1.6rem; //16px
+$radius-h: 2.4rem; //24px
+$radius-xh: 4.8rem; //48px
+
+//------------ SPACE VARIABLES --------------//
+
+$space-xs: 0.4rem; // 4px
+$space-s: 0.8rem; // 8px
+$space-m: 1.6rem; // 16px
+$space-l: 2.4rem; // 24px
+$space-xl: 3.2rem; // 32px
+$space-xxl: 4.8rem; // 48px
+$space-h: 6.4rem; // 64px
+$space-xh: 12.4rem; // 124px
+
+//----------------  MIXINS ------------------//
+
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@include maxWidth($bp-desktop) {
+}
+@include maxWidth($bp-tablet) {
+}
+@include maxWidth($bp-mobile) {
+}
