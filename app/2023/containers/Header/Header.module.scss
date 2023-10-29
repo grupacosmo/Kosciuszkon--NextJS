@@ -11,14 +11,14 @@
 .nav {
   padding: $space-s $space-l;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: $space-xl;
   border-bottom: 4px solid $color-main;
   background-color: $color-black;
 
   &List {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     gap: $space-xl;
 
     @include maxWidth($bp-tablet) {
