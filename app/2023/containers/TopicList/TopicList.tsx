@@ -12,7 +12,6 @@ export function TopicList(): ReactElement {
       <Slider
         render={SlideContent}
         slides={sliderContent}
-        hasGrayscale
         containerClassName={styles.sliderContainer}
         nextButtonClassName={styles.nextSlideButton}
         prevButtonClassName={styles.prevSlideButton}

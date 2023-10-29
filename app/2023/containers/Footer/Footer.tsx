@@ -1,17 +1,22 @@
 'use client';
 
 import { type ReactElement, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { FaLocationDot } from 'react-icons/fa6';
 import { FooterContacts } from './components/FooterContact';
 import { FooterLinks } from './components/FooterLinks';
-import styles from './Footer.module.scss';
-
 import {
   visitUsLinks,
   externalLinks,
   externalLinksWithIcons,
   contacts,
 } from './data';
+import styles from './Footer.module.scss';
+
+const MapPortal = dynamic(
+  () => import('@/app/2023/containers/MapDialog/MapDialog'),
+  { ssr: false }
+);
 
 export function Footer(): ReactElement {
   const [isMapOpen, setIsMapOpen] = useState<boolean>(false);
@@ -56,8 +61,7 @@ export function Footer(): ReactElement {
       <section className={styles.copyright}>
         <p> Copyright © Wszelkie prawa zastrzeżone</p>
       </section>
-
-      {/* <MapPortal isOpen={isMapOpen} setIsOpen={setIsMapOpen} /> */}
+      <MapPortal isOpen={isMapOpen} setIsOpen={setIsMapOpen} />
     </footer>
   );
 }

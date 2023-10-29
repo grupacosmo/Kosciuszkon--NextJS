@@ -12,8 +12,8 @@ export function Questions(): ReactElement {
   return (
     <section className={styles.section}>
       <Countdown
-        startDate='2023-10-29T17:00:00'
-        endDate='2023-10-30T15:00:00'
+        startDate='2023-03-05T11:00:00'
+        endDate='2023-03-06T15:00:00'
       />
 
       <article className={styles.linksContainer}>
