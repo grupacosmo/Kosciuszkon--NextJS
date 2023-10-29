@@ -1,0 +1,17 @@
+.timer {
+  font-size: 3.2rem;
+
+  span {
+    padding: 0 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .timer {
+    font-size: 2.4rem;
+
+    span {
+      padding: 0 0.4rem;
+    }
+  }
+}

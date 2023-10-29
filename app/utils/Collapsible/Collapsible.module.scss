@@ -1,0 +1,51 @@
+@import '@/styles/abstracts/2023/variables.scss';
+
+.container {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  padding: $space-s 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px white solid;
+  text-align: start;
+  cursor: pointer;
+
+  & h4 {
+    font-size: $header-xs;
+    color: white;
+
+    @include maxWidth($bp-mobile) {
+      font-size: $font-m;
+    }
+  }
+
+  & svg {
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    margin-right: $space-m;
+    color: white;
+  }
+}
+
+.content {
+  padding: $space-m $space-s $space-l $space-s;
+
+  & p {
+    font-size: $font-l;
+
+    @include maxWidth($bp-mobile) {
+      font-size: $font-s;
+    }
+  }
+}
+
+.iconDown {
+  transform: rotate(90deg);
+}

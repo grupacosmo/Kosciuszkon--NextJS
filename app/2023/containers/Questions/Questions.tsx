@@ -1,14 +1,20 @@
 import { type ReactElement } from 'react';
 import { FaWpforms, FaFacebookF } from 'react-icons/fa';
-import { Collapsible, HexagonLink, Countdown } from '../../components';
+import { Collapsible } from '@/app/utils';
+import { HexagonLink } from './components/HexagonLink';
+import { Countdown } from './components/Countdown';
+import { questionsData } from './data';
 import styles from './Questions.module.scss';
 
-import { questionsData } from './data';
+
 
 export function Questions(): ReactElement {
   return (
     <section className={styles.section}>
-      <Countdown startDate='2023-10-25T11:00:00' endDate='2023-10-25T15:00:00' />
+      <Countdown
+        startDate='2023-10-29T17:00:00'
+        endDate='2023-10-30T15:00:00'
+      />
 
       <article className={styles.linksContainer}>
         <HexagonLink
@@ -31,7 +37,13 @@ export function Questions(): ReactElement {
 
       <article className={styles.faqContainer}>
         {questionsData.map(({ id, title, text }) => (
-          <Collapsible key={id} title={title} text={text} />
+          <Collapsible
+            key={id}
+            label={title}
+            buttonClassName={styles.faqCollapsibleButton}
+          >
+            <p>{text}</p>
+          </Collapsible>
         ))}
       </article>
     </section>
