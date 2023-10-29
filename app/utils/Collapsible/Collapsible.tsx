@@ -1,9 +1,17 @@
 'use client';
 
 import { useState, type ReactElement, type ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
 import { BiCaretRight } from 'react-icons/bi';
 import styles from './Collapsible.module.scss';
+
+const MOTION_CONFIG = {
+  initial: { y: '-30px' },
+  animate: { y: 0 },
+  exit: { y: '-30px' },
+  transition: { duration: 0.3, ease: 'easeOut' },
+};
 
 type CollapsibleProps = {
   label: string;
@@ -14,7 +22,7 @@ type CollapsibleProps = {
 };
 
 export function Collapsible({
-    label,
+  label,
   children,
   containerClassName,
   buttonClassName,
@@ -36,7 +44,13 @@ export function Collapsible({
         <BiCaretRight className={clsx({ [styles.iconDown]: isOpen })} />
         <h4>{label}</h4>
       </button>
-      {isOpen && <div className={contentClassNames}>{children}</div>}
+      {isOpen && (
+        <AnimatePresence>
+          <motion.div {...MOTION_CONFIG} className={contentClassNames}>
+            {children}
+          </motion.div>
+        </AnimatePresence>
+      )}
     </div>
   );
 }

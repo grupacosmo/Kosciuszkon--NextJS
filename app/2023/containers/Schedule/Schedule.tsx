@@ -5,6 +5,7 @@ import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
 import { ScheduleTable } from './components/ScheduleTable';
 import { scheduleData } from './data';
 import classes from './Schedule.module.scss';
+import { AnimatePresence } from 'framer-motion';
 
 export function Schedule(): ReactElement {
   const [isHackathon, setIsHackathon] = useState<boolean>(true);
@@ -26,20 +27,26 @@ export function Schedule(): ReactElement {
           />
         </button>
       </div>
-      {isHackathon ? (
-        <ScheduleTable
-          firstTitle='Niedziela'
-          firstArray={scheduleData.hackathon.sunday}
-          secondTitle='Poniedziałek'
-          secondArray={scheduleData.hackathon.monday}
-        />
-      ) : (
-        <ScheduleTable
-          firstTitle='Niedziela'
-          firstArray={scheduleData.workshop.sunday}
-          secondTitle='Poniedziałek'
-          secondArray={scheduleData.workshop.monday}
-        />
+
+      {isHackathon && (
+        <AnimatePresence>
+          <ScheduleTable
+            firstTitle='Niedziela'
+            firstArray={scheduleData.hackathon.sunday}
+            secondTitle='Poniedziałek'
+            secondArray={scheduleData.hackathon.monday}
+          />
+        </AnimatePresence>
+      )}
+      {!isHackathon && (
+        <AnimatePresence>
+          <ScheduleTable
+            firstTitle='Niedziela'
+            firstArray={scheduleData.workshop.sunday}
+            secondTitle='Poniedziałek'
+            secondArray={scheduleData.workshop.monday}
+          />
+        </AnimatePresence>
       )}
     </section>
   );

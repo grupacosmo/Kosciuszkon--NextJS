@@ -1,6 +1,13 @@
 import { type ReactElement } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './SliderItem.module.scss';
+
+const MOTION_CONFIG = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.4, ease: 'easeOut' },
+};
 
 type SlideImage = {
   src: StaticImageData;
@@ -29,13 +36,23 @@ export function SingleSlide({
   }
 
   return (
-    <article className={styles.slide}>
-      {image && (
-        <picture className={styles.slidePicture}>
-          <Image className={styles.slideImg} src={image.src} alt={image.alt} />
-        </picture>
+    <>
+      {isActive && (
+        <AnimatePresence>
+          <motion.article {...MOTION_CONFIG} className={styles.slide}>
+            {image && (
+              <picture className={styles.slidePicture}>
+                <Image
+                  className={styles.slideImg}
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </picture>
+            )}
+            {render(content)}
+          </motion.article>
+        </AnimatePresence>
       )}
-      {render(content)}
-    </article>
+    </>
   );
 }

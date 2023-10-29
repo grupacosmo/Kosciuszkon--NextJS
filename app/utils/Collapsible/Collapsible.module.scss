@@ -1,10 +1,13 @@
 @import '@/styles/2023/variables.scss';
 
 .container {
+  position: relative;
   width: 100%;
 }
 
 .button {
+  z-index: 1;
+  position: relative;
   width: 100%;
   display: flex;
   padding: $space-s 0;
@@ -35,6 +38,8 @@
 }
 
 .content {
+  z-index: 0;
+  position: relative;
   padding: $space-m $space-s $space-l $space-s;
 
   & p {
