@@ -9,7 +9,7 @@ import {
   Footer,
   SectionDivider,
   SectionGradient,
-} from './2023/containers';
+} from './2024/containers';
 
 export default function Home() {
   return (

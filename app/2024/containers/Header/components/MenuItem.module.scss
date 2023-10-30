@@ -1,0 +1,14 @@
+@import '@/styles/2024/variables.scss';
+
+.link {
+  font-size: $font-l;
+  color: $color-white;
+
+  &:hover {
+    transition: 0.3s;
+    color: $color-main;
+  }
+}
+
+
+

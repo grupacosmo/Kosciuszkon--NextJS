@@ -1,0 +1,122 @@
+@import '@/styles/2024/variables.scss';
+
+.divider {
+  z-index: 0;
+  position: relative;
+  width: 0;
+  height: 150px;
+  margin: auto;
+  background-color: $color-background;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    margin-top: 30px;
+    width: 0px;
+    top: 0px;
+    left: -900px;
+    border-top: 109px solid $color-main;
+    border-left: 900px solid transparent;
+    border-right: 900px solid transparent;
+    z-index: -2;
+    background-color: $color-background;
+  }
+
+  &Inner {
+    width: 0px;
+    height: 50px;
+    margin: auto;
+    margin-top: auto;
+    background-color: $color-black;
+    padding-top: 30px;
+    margin-top: -30px;
+    position: relative;
+    box-sizing: border-box;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      margin-top: 30px;
+      width: 0px;
+      top: -5px;
+      left: -900px;
+      border-top: 109px solid $color-black;
+      border-left: 900px solid transparent;
+      border-right: 900px solid transparent;
+      z-index: -1;
+    }
+  }
+
+  &TitleOuter {
+    position: absolute;
+    width: 300px;
+    height: 78px;
+    background-color: $color-main;
+    margin-left: calc(50% - 150px);
+    margin-top: 5px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: -30px;
+      border-top: 78px solid transparent;
+      border-right: 30px solid $color-main;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      border-top: 78px solid transparent;
+      border-left: 30px solid $color-main;
+      left: 300px;
+      margin: 0px;
+    }
+  }
+
+  &TitleInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 292px;
+    height: 75px;
+    background-color: $color-black;
+    margin-left: 4px;
+    margin-top: 3px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: -29px;
+      border-top: 74px solid transparent;
+      border-right: 29px solid $color-black;
+      border-bottom: 4px solid transparent;
+      margin: 0px;
+      z-index: 1;
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      left: 292px;
+      border-top: 74px solid transparent;
+      border-left: 29px solid $color-black;
+      border-bottom: 4px solid transparent;
+      margin: 0px;
+      z-index: 1;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      color: white;
+      z-index: 3;
+      font-size: $header-xl;
+    }
+  }
+}
