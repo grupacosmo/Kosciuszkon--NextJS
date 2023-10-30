@@ -6,7 +6,7 @@ export function Hero(): ReactElement {
   return (
     <section className={classes.section}>
       <div className={classes.title}>
-        <h1>Kościuszkon</h1>
+        <h1>Kościuszkon I</h1>
         <p>
           Zapraszamy na pierwszą edycję hackathonu organizowanego przez Wydział
           Informatyki i Telekomunikacji Politechniki Krakowskiej. Czekają na was

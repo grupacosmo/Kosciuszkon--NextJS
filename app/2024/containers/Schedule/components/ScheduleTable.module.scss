@@ -1,0 +1,39 @@
+@import '@/styles/2024/variables.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 350px;
+  margin-bottom: $space-xxl;
+
+  @include maxWidth($bp-desktop) {
+    grid-template-columns: 1fr;
+  }
+
+  h3 {
+    margin-bottom: $space-s;
+    text-align: center;
+    font-size: $header-l;
+
+    @include maxWidth($bp-mobile) {
+      font-size: $header-m;
+    }
+  }
+
+  article {
+    padding: 0 $space-s;
+
+    @include maxWidth($bp-desktop) {
+      margin: $space-xl 0;
+      padding: 0;
+    }
+  }
+
+  & > article:first-child {
+    border-right: 2px solid $color-main;
+
+    @include maxWidth($bp-desktop) {
+      border-right: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '@/styles/2024/variables.scss';
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin: $space-h auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sliderContainer {
+  max-width: 1200px;
+  align-self: center;
+}
+
+.nextSlideButton {
+  @include maxWidth($bp-mobile) {
+    top: 95%;
+    left: 85%;
+  }
+}
+
+.prevSlideButton {
+  @include maxWidth($bp-mobile) {
+    top: 95%;
+    left: 15%;
+  }
+}
