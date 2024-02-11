@@ -1,30 +1,35 @@
 'use client';
 
 import { type ReactElement, useState } from 'react';
-import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
+import { AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
+
 import { ScheduleTable } from './components/ScheduleTable';
 import { scheduleData } from './data';
-import classes from './Schedule.module.scss';
-import { AnimatePresence } from 'framer-motion';
+
+import styles from './Schedule.module.scss';
 
 export function Schedule(): ReactElement {
   const [isHackathon, setIsHackathon] = useState<boolean>(true);
 
   return (
-    <section className={classes.schedule}>
-      <div className={classes.controls}>
-        <button onClick={() => setIsHackathon((state) => !state)}>
-          <BiCaretLeft
-            className={classes.icon}
-            aria-label='Zmień rodzaj harmonogramu'
-          />
+    <section className={styles.schedule}>
+      <div className={styles.controls}>
+        <button
+          onClick={() => setIsHackathon(true)}
+          className={clsx(styles.button, styles.buttonRight, {
+            [styles.isActive]: isHackathon,
+          })}
+        >
+          Hackathon
         </button>
-        <h2>{isHackathon ? 'Hackathon' : 'Warsztaty'}</h2>
-        <button onClick={() => setIsHackathon((state) => !state)}>
-          <BiCaretRight
-            className={classes.icon}
-            aria-label='Zmień rodzaj harmonogramu'
-          />
+        <button
+          onClick={() => setIsHackathon(false)}
+          className={clsx(styles.button, styles.buttonLeft, {
+            [styles.isActive]: !isHackathon,
+          })}
+        >
+          Warsztaty
         </button>
       </div>
 

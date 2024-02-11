@@ -10,6 +10,14 @@
     grid-template-columns: 1fr;
   }
 
+  @include maxWidth($bp-tablet) {
+    margin: 0 $space-l;
+  }
+
+  @include maxWidth($bp-mobile) {
+    margin: 0 $space-m;
+  }
+
   h3 {
     margin-bottom: $space-s;
     text-align: center;
