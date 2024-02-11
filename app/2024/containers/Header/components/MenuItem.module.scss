@@ -8,7 +8,8 @@
     transition: 0.3s;
     color: $color-main;
   }
+
+  @include maxWidth($bp-tablet) {
+    font-size: $header-s;
+  }
 }
-
-
-

@@ -1,13 +1,12 @@
 'use client';
 
-import { useState, type ReactElement } from 'react';
+import { useState, type ReactElement, useEffect } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { BiMenu } from 'react-icons/bi';
+import { BiMenu, BiX } from 'react-icons/bi';
 import { MenuItem } from './components/MenuItem';
 import { localLinks } from './data';
 import styles from './Header.module.scss';
-import style from './components/MenuItem.module.scss';
 
 export function Header(): ReactElement {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,18 +26,24 @@ export function Header(): ReactElement {
           {localLinks.map((link) => (
             <MenuItem key={link.id} onClick={closeMenu} {...link} />
           ))}
-          <Link className={style.link} href='/2023'>
+          <Link className={styles.link} href='/2023'>
             I Edycja
           </Link>
         </ul>
 
         <button
-          className={styles.navButton}
+          className={clsx(styles.navButton, {
+            [styles.mobileNavButton]: isMenuOpen,
+          })}
           onClick={() => {
             setIsMenuOpen((state) => !state);
           }}
         >
-          <BiMenu aria-label='Menu' />
+          {isMenuOpen ? (
+            <BiX aria-label='Menu' />
+          ) : (
+            <BiMenu aria-label='Menu' />
+          )}
         </button>
       </nav>
 
@@ -47,7 +52,7 @@ export function Header(): ReactElement {
           {localLinks.map((link) => (
             <MenuItem key={link.id} onClick={closeMenu} {...link} />
           ))}
-          <Link className={style.link} href='/2023'>
+          <Link className={styles.link} href='/2023'>
             I Edycja
           </Link>
         </ul>
