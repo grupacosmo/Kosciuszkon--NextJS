@@ -4,25 +4,25 @@ import { type ReactElement, useState } from 'react';
 import { BiCaretRight, BiCaretLeft } from 'react-icons/bi';
 import { ScheduleTable } from './components/ScheduleTable';
 import { scheduleData } from './data';
-import classes from './Schedule.module.scss';
+import styles from './Schedule.module.scss';
 import { AnimatePresence } from 'framer-motion';
 
 export function Schedule(): ReactElement {
   const [isHackathon, setIsHackathon] = useState<boolean>(true);
 
   return (
-    <section className={classes.schedule}>
-      <div className={classes.controls}>
+    <section className={styles.schedule}>
+      <div className={styles.controls}>
         <button onClick={() => setIsHackathon((state) => !state)}>
           <BiCaretLeft
-            className={classes.icon}
+            className={styles.icon}
             aria-label='Zmień rodzaj harmonogramu'
           />
         </button>
         <h2>{isHackathon ? 'Hackathon' : 'Warsztaty'}</h2>
         <button onClick={() => setIsHackathon((state) => !state)}>
           <BiCaretRight
-            className={classes.icon}
+            className={styles.icon}
             aria-label='Zmień rodzaj harmonogramu'
           />
         </button>
