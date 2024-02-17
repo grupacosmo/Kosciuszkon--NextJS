@@ -1,7 +1,7 @@
-import kwadrat from '@/app/2023/assets/img/bcg/kwadrat.jpg';
-import kodowanie from '@/app/2023/assets/img/bcg/kodowanie.jpg';
-import prelekcje from '@/app/2023/assets/img/bcg/prelekcje.jpg';
-import targi from '@/app/2023/assets/img/bcg/targi.jpg';
+import kwadrat from '@/app/2024/assets/img/bcg/kwadrat.jpg';
+import kodowanie from '@/app/2024/assets/img/bcg/kodowanie.jpg';
+import prelekcje from '@/app/2024/assets/img/bcg/prelekcje.jpg';
+import targi from '@/app/2024/assets/img/bcg/targi.jpg';
 
 export const sliderContent = [
   {
