@@ -30,3 +30,7 @@
     height: 96px;
   }
 }
+
+.disabled {
+  filter: grayscale(1);
+}

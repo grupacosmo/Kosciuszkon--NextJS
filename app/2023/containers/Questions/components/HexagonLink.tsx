@@ -13,6 +13,7 @@ type HexagonLinkProps = {
   href: string;
   alt: string;
   Icon: IconType;
+  disabled?: boolean;
   className?: string;
 };
 
@@ -23,9 +24,24 @@ export function HexagonLink({
   href,
   alt,
   Icon,
+  disabled = false,
   className,
 }: HexagonLinkProps): ReactElement {
-  const containerClassNames = clsx(styles.container, className);
+  const containerClassNames = clsx(styles.container, className, {
+    [styles.disabled]: disabled,
+  });
+
+  if (disabled) {
+    return (
+      <div className={containerClassNames}>
+        <h3 id={id}>{label}</h3>
+        <a className={styles.link} role='link' aria-disabled='true'>
+          <Icon />
+          <Image src={hex} alt={alt} width={96} height={96} />
+        </a>
+      </div>
+    );
+  }
 
   return (
     <div className={containerClassNames}>

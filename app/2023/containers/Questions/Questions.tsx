@@ -5,15 +5,20 @@ import { HexagonLink } from './components/HexagonLink';
 import { Countdown } from './components/Countdown';
 import { questionsData } from './data';
 import styles from './Questions.module.scss';
+import { calcEndTime } from './components/utils';
 
-
+const START_DATE = '023-03-05T11:00:00';
+const END_DATE = '2023-03-06T15:00:00';
 
 export function Questions(): ReactElement {
+  const disableCountdown = calcEndTime(END_DATE) < 0;
+
   return (
     <section className={styles.section}>
       <Countdown
-        startDate='2023-03-05T11:00:00'
-        endDate='2023-03-06T15:00:00'
+        startDate={START_DATE}
+        endDate={END_DATE}
+        disabled={disableCountdown}
       />
 
       <article className={styles.linksContainer}>
@@ -24,6 +29,7 @@ export function Questions(): ReactElement {
           href='https://forms.office.com/r/9AH7VzkWa4'
           alt='Czarny sześciokąt z zielonym obramowaniem i ikoną formularza.'
           Icon={FaWpforms}
+          disabled
         />
         <HexagonLink
           id='faq__fb-evennt-label'
