@@ -1,11 +1,14 @@
 import { type ReactElement } from 'react';
 import { FaWpforms, FaFacebookF } from 'react-icons/fa';
+
 import { Collapsible } from '@/app/utils';
+
 import { HexagonLink } from './components/HexagonLink';
 import { Countdown } from './components/Countdown';
 import { questionsData } from './data';
-import styles from './Questions.module.scss';
 import { calcEndTime } from './components/utils';
+
+import styles from './Questions.module.scss';
 
 const START_DATE = '023-03-05T11:00:00';
 const END_DATE = '2023-03-06T15:00:00';

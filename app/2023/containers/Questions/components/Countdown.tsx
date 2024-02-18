@@ -1,12 +1,14 @@
 'use client';
 
 import { type ReactElement, useEffect, useState } from 'react';
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import styles from './Countdown.module.scss';
 
 import hex from '../../../assets/svg/hex-timer.svg';
-import clsx from 'clsx';
+
+import styles from './Countdown.module.scss';
+
 import { calcEndTime, calcProps, calcStartTime } from './utils';
 
 const Timer = dynamic(() => import('@/app/utils/Timer/Timer'), { ssr: false });
@@ -56,4 +58,3 @@ export function Countdown({
     </article>
   );
 }
-
