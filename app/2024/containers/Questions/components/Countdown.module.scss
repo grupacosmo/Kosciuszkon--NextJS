@@ -49,3 +49,7 @@
     height: 65px;
   }
 }
+
+.disabled {
+  filter: grayscale(1);
+}
