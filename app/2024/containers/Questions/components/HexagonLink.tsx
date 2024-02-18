@@ -2,9 +2,10 @@ import { type ReactElement } from 'react';
 import Image from 'next/image';
 import { type IconType } from 'react-icons';
 import clsx from 'clsx';
-import styles from './HexagonLink.module.scss';
 
 import hex from '../../../assets/svg/hex-64.svg';
+
+import styles from './HexagonLink.module.scss';
 
 type HexagonLinkProps = {
   id: string;

@@ -43,11 +43,6 @@ export const externalLinks = [
     href: 'https://drive.google.com/file/d/1GKs2Gf_lKRk_lYXAfLcviRvcbeVVuq57/view?usp=sharing',
     label: 'Regulamin',
   },
-  {
-    id: 2,
-    href: 'https://www.facebook.com/samorzad.wiitpk',
-    label: 'Organizatorzy',
-  },
 ];
 
 export const externalLinksWithIcons = [
