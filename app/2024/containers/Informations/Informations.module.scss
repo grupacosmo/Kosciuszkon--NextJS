@@ -74,7 +74,7 @@
 }
 
 .sliderDots {
-  left: calc(50% + 210px);
+  left: calc(50%);
 
   @include maxWidth($bp-desktop) {
     left: 50%;
@@ -82,9 +82,10 @@
 }
 
 .nextSlideButton {
+  left: calc(50% + 305px);
+
   @include maxWidth($bp-desktop) {
-    top: 75%;
-    left: 95%;
+    top: 70%;
   }
 
   @include maxWidth($bp-mobile) {
@@ -96,11 +97,10 @@
 }
 
 .prevSlideButton {
-  left: calc(5% + 420px);
+  left: calc(50% - 305px);
 
   @include maxWidth($bp-desktop) {
-    top: 75%;
-    left: 5%;
+    top: 70%;
   }
 
   @include maxWidth($bp-mobile) {

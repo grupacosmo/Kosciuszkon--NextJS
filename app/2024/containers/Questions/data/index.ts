@@ -2,7 +2,7 @@ export const questionsData = [
   {
     id: 1,
     title: 'Kiedy, co i gdzie to się odbywa?',
-    text: 'Zarówno Hackathon, niektóre konferencje i targi pracy odbywają się 5-6 marca w Krakowie w Klubie Kwadrat. Dokładne miejsca i harmonogramy konferencji zostaną udostępnione w harmonogramie. Wydarzenie rozpoczyna się od 11:00, sam Hackathon około godziny 15:00. Prosimy o śledzenie zmian.',
+    text: 'Zarówno Hackathon jak i wszelkie atrakcje odbędą się 8-9 czerwca w Krakowie w Klubie Kwadrat. Dokładne godziny i miejsca zostaną udostępnione na stronie oraz na wydarzeniu na facebooku, dlatego prosimy o śledzenie zmian.',
   },
   {
     id: 2,

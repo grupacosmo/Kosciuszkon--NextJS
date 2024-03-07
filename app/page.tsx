@@ -28,8 +28,8 @@ export default function Home() {
       <SectionDivider name='zapisy' />
       <Questions />
       <SectionGradient />
-      <SectionDivider name='partnerzy' />
-      <Partners />
+      {/* <SectionDivider name='partnerzy' />
+      <Partners /> */}
       <Footer />
     </main>
   );

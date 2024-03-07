@@ -7,9 +7,8 @@ export function Hero(): ReactElement {
       <div className={styles.title}>
         <h1>Kościuszkon II</h1>
         <p>
-          Zapraszamy na pierwszą edycję hackathonu organizowanego przez Wydział
-          Informatyki i Telekomunikacji Politechniki Krakowskiej. Czekają na was
-          24 godziny pracy nad ciekawym wyzwaniem oraz dobra zabawa.
+          Zapraszamy na drugą edycję Kościuszkonu. Zbierz swoich znajomych i
+          przygotuj się na 24 godziny walki o atrakcyjne nagrody.
         </p>
         <div className={styles.titleBackground} />
       </div>

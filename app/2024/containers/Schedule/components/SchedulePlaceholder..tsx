@@ -4,7 +4,7 @@ import styles from './SchedulePlaceholder.module.scss';
 export function SchedulePlaceholder(): ReactElement {
   return (
     <div className={styles.container}>
-      <h2>Harmonogram zostanie wkrótce opublikowany</h2>
+      <h2>Szczegółowy harmonogram już wkrótce</h2>
       <picture className={styles.picture}>
         <source
           media='(max-width:629px)'

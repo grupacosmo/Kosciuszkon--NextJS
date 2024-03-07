@@ -4,7 +4,7 @@ import styles from './TopicPlaceholder.module.scss';
 export function TopicPlaceholder(): ReactElement {
   return (
     <div className={styles.container}>
-      <h2>Temat heckatonu zostanie wkrótce opublikowany</h2>
+      <h2>Szczegóły tematu zostaną udostępnione na wydarzeniu</h2>
       <picture className={styles.picture}>
         <source media='(max-width:629px)' srcSet='/2024/topic/topic-sm.JPG' />
         <source media='(max-width:950px)' srcSet='/2024/topic/topic-md.JPG' />
