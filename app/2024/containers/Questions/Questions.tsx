@@ -9,8 +9,8 @@ import { questionsData } from './data';
 
 import styles from './Questions.module.scss';
 
-const START_DATE = '2024-03-05T11:00:00';
-const END_DATE = '2024-03-06T15:00:00';
+const START_DATE = '2024-07-08T12:00:00';
+const END_DATE = '2024-07-09T22:00:00';
 
 export function Questions(): ReactElement {
   const disableCountdown = calcEndTime(END_DATE) < 0;
