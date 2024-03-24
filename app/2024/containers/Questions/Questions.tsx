@@ -37,7 +37,7 @@ export function Questions(): ReactElement {
           id='faq__fb-evennt-label'
           label='Wydarzenie na Facebooku'
           arialLabel='faq__fb-evennt-label'
-          href='https://www.facebook.com/events/545483540957513/'
+          href='https://www.facebook.com/kosciuszkon'
           alt="Czarny sześciokąt z zielonym obramowaniem i ikoną Facebooka'a."
           Icon={FaFacebookF}
         />
