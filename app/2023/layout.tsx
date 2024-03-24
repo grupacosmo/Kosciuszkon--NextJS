@@ -1,7 +1,7 @@
 import '@/styles/2023/main.scss';
 
 export const metadata = {
-  metadataBase: '/2023',
+  metadataBase: new URL('https://kosciuszkon.pk.edu.pl/2023'),
   title: 'Kościuszkon - I Edycja 2023',
   description: `Pierwsza edycja hackathonu organizowanego przez Wydział
   Informatyki i Telekomunikacji Politechniki Krakowskiej. Pierwsza edycja odbyło się 5 marca 2023 roku o godzinie 11:00.
@@ -15,8 +15,8 @@ export const metadata = {
         width: 2048,
         height: 2048,
         alt: 'Logo heckathonu Kościuszkon',
-      }
-    ]
+      },
+    ],
   },
 };
 
@@ -27,4 +27,3 @@ export default function RootLayout({
 }) {
   return <>{children}</>;
 }
-
