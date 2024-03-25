@@ -2,7 +2,7 @@ import { type ReactElement } from 'react';
 import { IconType } from 'react-icons';
 
 type Contact = {
-  id: number;
+  id: string;
   href: string;
   label: string;
   Icon: IconType;

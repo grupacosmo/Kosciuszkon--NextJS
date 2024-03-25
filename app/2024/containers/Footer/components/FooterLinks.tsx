@@ -3,23 +3,23 @@ import Image, { type StaticImageData } from 'next/image';
 import { type IconType } from 'react-icons';
 
 type BaseLink = {
-  id: number;
+  id: string;
   href: string;
   label: string;
 };
 
 type IconLink = {
-  id: number;
+  id: string;
   href: string;
   label: string;
   Icon: IconType;
 };
 
 type ImageLink = {
-  id: number;
+  id: string;
   href: string;
   alt: string;
-  src: StaticImageData;
+  src: string;
 };
 
 type FooterLinksProps = {
@@ -61,7 +61,7 @@ export function FooterLinks({
         imageLinks.map(({ id, href, alt, src }) => (
           <li key={id} className={className}>
             <a key={id} href={href} target='_blank' rel='noreferrer'>
-              <Image src={src} alt={alt} />
+              <img src={src} alt={alt} />
             </a>
           </li>
         ))}

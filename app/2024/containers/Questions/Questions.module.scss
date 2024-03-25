@@ -30,15 +30,15 @@
   }
 
   &CollapsibleButton {
-    border-color: $color-main;
-    background-color: $color-background;
+    border-color: $color-main !important;
+    background-color: $color-background !important;
 
     & h4 {
-      color: $color-main;
+      color: $color-main !important;
     }
 
     & svg {
-      color: $color-main;
+      color: $color-main !important;
     }
   }
 }

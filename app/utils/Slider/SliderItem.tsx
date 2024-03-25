@@ -1,5 +1,4 @@
 import { type ReactElement } from 'react';
-import Image, { StaticImageData } from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './SliderItem.module.scss';
 
@@ -10,7 +9,7 @@ const MOTION_CONFIG = {
 };
 
 type SlideImage = {
-  src: StaticImageData;
+  src: string;
   alt: string;
 };
 
@@ -42,7 +41,7 @@ export function SingleSlide({
           <motion.article {...MOTION_CONFIG} className={styles.slide}>
             {image && (
               <picture className={styles.slidePicture}>
-                <Image
+                <img
                   className={styles.slideImg}
                   src={image.src}
                   alt={image.alt}

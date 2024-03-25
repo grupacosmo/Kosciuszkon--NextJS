@@ -1,6 +1,6 @@
 export const sliderContent = [
   {
-    id: '1',
+    id: '2024-topic-1',
     content: {
       title: 'Temat I - Zdrowie Psychiczne',
       text: `Zdarzenia na przestrzeni ostatnich kilku lat niewątpliwie
@@ -15,7 +15,7 @@ export const sliderContent = [
     },
   },
   {
-    id: '2',
+    id: '2024-topic-2',
     content: {
       title: 'Temat II - Zdrowie Fizyczne',
       text: `Przymusowa izolacja oraz ograniczenia przemieszczania się,
@@ -30,7 +30,7 @@ export const sliderContent = [
     },
   },
   {
-    id: '3',
+    id: '2024-topic-3',
     content: {
       title: 'Temat III - Kultura i Rozrywka',
       text: ` Czas pandemii i izolacji sprawił, że zatęskniliśmy za sobą i
