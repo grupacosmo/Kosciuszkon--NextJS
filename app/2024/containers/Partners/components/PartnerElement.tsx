@@ -2,8 +2,8 @@ import { ReactElement } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 export type PartnerElementProps = {
-  id: number;
-  img: StaticImageData;
+  id: string;
+  img: string;
   link: string;
   partnerName: string;
   className?: string;
