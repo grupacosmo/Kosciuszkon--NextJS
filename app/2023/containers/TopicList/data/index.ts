@@ -1,6 +1,6 @@
 export const sliderContent = [
   {
-    id: '1',
+    id: '2023-topic-1',
     content: {
       title: 'Temat I - Zdrowie Psychiczne',
       text: `Zdarzenia na przestrzeni ostatnich kilku lat niewątpliwie
@@ -15,7 +15,7 @@ export const sliderContent = [
     },
   },
   {
-    id: '2',
+    id: '2023-topic-2',
     content: {
       title: 'Temat II - Zdrowie Fizyczne',
       text: `Przymusowa izolacja oraz ograniczenia przemieszczania się,
@@ -30,10 +30,10 @@ export const sliderContent = [
     },
   },
   {
-    id: '3',
+    id: '2023-topic-3',
     content: {
       title: 'Temat III - Kultura i Rozrywka',
-      text: ` Czas pandemii i izolacji sprawił, że zatęskniliśmy za sobą i
+      text: `Czas pandemii i izolacji sprawił, że zatęskniliśmy za sobą i
       miejscami, gdzie dotąd się widywaliśmy. Obecnie wydarzenia
       kulturalne wracają do łask, niektóre z nich jednak możliwe, że już
       nie wrócą. Przykry jednak może być fakt, że część ludzi mogła się

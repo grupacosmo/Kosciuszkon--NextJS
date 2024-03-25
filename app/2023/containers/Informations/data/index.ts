@@ -1,13 +1,8 @@
-import kwadrat from '@/app/2023/assets/img/bcg/kwadrat.jpg';
-import kodowanie from '@/app/2023/assets/img/bcg/kodowanie.jpg';
-import prelekcje from '@/app/2023/assets/img/bcg/prelekcje.jpg';
-import targi from '@/app/2023/assets/img/bcg/targi.jpg';
-
 export const sliderContent = [
   {
-    id: '1',
+    id: '2023-slider-1',
     image: {
-      src: kwadrat,
+      src: '/2023/bcg/kwadrat.jpg',
       alt: 'Budynek w którym mieści się studio kwadrat.',
     },
     content: {
@@ -23,9 +18,9 @@ export const sliderContent = [
     },
   },
   {
-    id: '2',
+    id: '2023-slider-2',
     image: {
-      src: kodowanie,
+      src: '/2023/bcg/kodowanie.jpg',
       alt: 'Uczestnicy heckathonu, którzy piszą kod.',
     },
     content: {
@@ -40,9 +35,9 @@ export const sliderContent = [
     },
   },
   {
-    id: '3',
+    id: '2023-slider-3',
     image: {
-      src: prelekcje,
+      src: '/2023/bcg/prelekcje.jpg',
       alt: 'Sala wykładowa.',
     },
     content: {
@@ -58,9 +53,9 @@ export const sliderContent = [
     },
   },
   {
-    id: '4',
+    id: '2023-slider-4',
     image: {
-      src: targi,
+      src: '/2023/bcg/targi.jpg',
       alt: 'Sala wykładowa.',
     },
     content: {

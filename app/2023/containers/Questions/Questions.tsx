@@ -17,7 +17,7 @@ export function Questions(): ReactElement {
   const disableCountdown = calcEndTime(END_DATE) < 0;
 
   return (
-    <section className={styles.section}>
+    <section key='2023' className={styles.section}>
       <Countdown
         startDate={START_DATE}
         endDate={END_DATE}
