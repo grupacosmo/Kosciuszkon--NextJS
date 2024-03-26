@@ -17,7 +17,7 @@ const MOTION_CONFIG = {
 };
 
 const ICON = new Icon({
-  iconUrl: '/2023/marker.svg',
+  iconUrl: '/p2023/marker.svg',
   iconSize: [48, 48],
 });
 

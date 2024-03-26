@@ -16,7 +16,7 @@ export function Hero(): ReactElement {
       </div>
 
       <div className={styles.videoContainer}>
-        <video src='/2023/video.mp4' autoPlay muted loop />
+        <video src='/p2023/video.mp4' autoPlay muted loop />
       </div>
       <div className={styles.gradient}></div>
     </section>

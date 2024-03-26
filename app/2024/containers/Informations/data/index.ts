@@ -2,7 +2,7 @@ export const sliderContent = [
   {
     id: '2024-slied-1',
     image: {
-      src: '/2024/bcg/kwadrat.jpg',
+      src: '/p2024/bcg/kwadrat.jpg',
       alt: 'Budynek w którym mieści się studio kwadrat.',
     },
     content: {
@@ -16,7 +16,7 @@ export const sliderContent = [
   {
     id: '2024-slied-2',
     image: {
-      src: '/2024/bcg/kodowanie.jpg',
+      src: '/p2024/bcg/kodowanie.jpg',
       alt: 'Uczestnicy heckathonu, którzy piszą kod.',
     },
     content: {
@@ -32,7 +32,7 @@ export const sliderContent = [
   {
     id: '2024-slied-3',
     image: {
-      src: '/2024/bcg/targi.jpg',
+      src: '/p2024/bcg/targi.jpg',
       alt: 'Sala wykładowa.',
     },
     content: {

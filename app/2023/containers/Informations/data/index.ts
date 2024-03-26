@@ -2,7 +2,7 @@ export const sliderContent = [
   {
     id: '2023-slider-1',
     image: {
-      src: '/2023/bcg/kwadrat.jpg',
+      src: '/p2023/bcg/kwadrat.jpg',
       alt: 'Budynek w którym mieści się studio kwadrat.',
     },
     content: {
@@ -20,7 +20,7 @@ export const sliderContent = [
   {
     id: '2023-slider-2',
     image: {
-      src: '/2023/bcg/kodowanie.jpg',
+      src: '/p2023/bcg/kodowanie.jpg',
       alt: 'Uczestnicy heckathonu, którzy piszą kod.',
     },
     content: {
@@ -37,7 +37,7 @@ export const sliderContent = [
   {
     id: '2023-slider-3',
     image: {
-      src: '/2023/bcg/prelekcje.jpg',
+      src: '/p2023/bcg/prelekcje.jpg',
       alt: 'Sala wykładowa.',
     },
     content: {
@@ -55,7 +55,7 @@ export const sliderContent = [
   {
     id: '2023-slider-4',
     image: {
-      src: '/2023/bcg/targi.jpg',
+      src: '/p2023/bcg/targi.jpg',
       alt: 'Sala wykładowa.',
     },
     content: {

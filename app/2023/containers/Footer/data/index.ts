@@ -10,25 +10,25 @@ export const visitUsLinks = [
     id: '2023-visit-1',
     href: 'https://samorzad.pk.edu.pl',
     alt: 'Samorząd Studencki Politechniki Krakowskiej.',
-    src: '/2023/visit/wrss.png',
+    src: '/p2023/visit/wrss.png',
   },
   {
     id: '2023-visit-2',
     href: 'https://klubkwadrat.pl/pl',
     alt: 'Klub Kwadrat.',
-    src: '/2023/visit/kwadrat.png',
+    src: '/p2023/visit/kwadrat.png',
   },
   {
     id: '2023-visit-3',
     href: 'https://fundacjapk.com/',
     alt: 'Fundacja Samorządu Studentów Politechniki Krakowskiej.',
-    src: '/2023/visit/fundacja.png',
+    src: '/p2023/visit/fundacja.png',
   },
   {
     id: '2023-visit-4',
     href: 'https://www.facebook.com/cosmopk.kn',
     alt: 'Koło Naukowe Cosmo PK.',
-    src: '/2023/visit/fundacja.png',
+    src: '/p2023/visit/fundacja.png',
   },
 ];
 
