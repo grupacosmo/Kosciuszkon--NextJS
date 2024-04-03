@@ -48,7 +48,7 @@ export function Header(): ReactElement {
             <MenuItem key={link.id} onClick={closeMenu} {...link} />
           ))}
           <Link className={style.link} href='/'>
-            Obecna edcja
+            Obecna edycja
           </Link>
         </ul>
       </nav>
