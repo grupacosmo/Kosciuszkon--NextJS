@@ -35,7 +35,7 @@ export const visitUsLinks = [
 export const externalLinks = [
   {
     id: '2024-terms-1',
-    href: 'https://drive.google.com/file/d/1GKs2Gf_lKRk_lYXAfLcviRvcbeVVuq57/view?usp=sharing',
+    href: 'https://docs.google.com/document/d/1x8JgOqfPXVKXww0FCGjMU2WsuptS1Jix8pncwWYgNj0/edit?usp=sharing',
     label: 'Regulamin',
   },
 ];
@@ -70,8 +70,8 @@ export const externalLinksWithIcons = [
 export const contacts = [
   {
     id: '2024-contact-1',
-    href: 'mailto:hackathon.pk.2022@gmail.com',
-    label: 'hackathon.pk.2022@gmail.com',
+    href: 'mailto:s.kosciuszkon@samorzad.pk.edu.pl',
+    label: 's.kosciuszkon@samorzad.pk.edu.pl',
     Icon: FaEnvelope,
   },
   {
