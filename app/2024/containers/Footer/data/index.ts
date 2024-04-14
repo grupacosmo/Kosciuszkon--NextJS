@@ -70,8 +70,8 @@ export const externalLinksWithIcons = [
 export const contacts = [
   {
     id: '2024-contact-1',
-    href: 'mailto:s.kosciuszkon@samorzad.pk.edu.pl',
-    label: 's.kosciuszkon@samorzad.pk.edu.pl',
+    href: 'mailto:kosciuszkon@samorzad.pk.edu.pl',
+    label: 'kosciuszkon@samorzad.pk.edu.pl',
     Icon: FaEnvelope,
   },
   {
