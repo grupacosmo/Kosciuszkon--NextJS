@@ -28,10 +28,9 @@ export function Questions(): ReactElement {
           id='faq__form-label'
           label='Formularz rejestracyjny'
           arialLabel='faq__form-label'
-          href='https://forms.office.com/r/9AH7VzkWa4'
+          href='https://forms.office.com/e/eH1rLsTQvK'
           alt='Czarny sześciokąt z zielonym obramowaniem i ikoną formularza.'
           Icon={FaWpforms}
-          disabled
         />
         <HexagonLink
           id='faq__fb-evennt-label'
