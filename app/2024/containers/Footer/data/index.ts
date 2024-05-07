@@ -22,7 +22,7 @@ export const visitUsLinks = [
     id: '2024-visit-3',
     href: 'https://fundacjapk.com/',
     alt: 'Fundacja Samorządu Studentów Politechniki Krakowskiej.',
-    src: '/p2024/visit/fundacja.png',
+    src: '/p2024/visit/fpk.png',
   },
   {
     id: '2024-visit-4',
