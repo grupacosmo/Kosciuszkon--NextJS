@@ -14,7 +14,12 @@ export function Hero(): ReactElement {
       </div>
 
       <div className={styles.videoContainer}>
-        <video src='/p2024/video.mp4' autoPlay muted loop />
+        <video autoPlay muted loop>
+          <source src='/p2024/video.webm' type='video/webm' />
+          <source src='/p2024/video.m4v' type='video/m4v' />
+          <source src='/p2024/video.mp4' type='video/mp4' /> 
+          <source src='/p2024/video.mov' type='video/mov' />
+        </video>
       </div>
       <div className={styles.gradient}></div>
     </section>

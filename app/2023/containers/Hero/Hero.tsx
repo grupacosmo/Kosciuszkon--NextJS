@@ -1,7 +1,6 @@
 import { ReactElement } from 'react';
 import styles from './Hero.module.scss';
 
-
 export function Hero(): ReactElement {
   return (
     <section className={styles.section}>
@@ -16,7 +15,12 @@ export function Hero(): ReactElement {
       </div>
 
       <div className={styles.videoContainer}>
-        <video src='/p2023/video.mp4' autoPlay muted loop />
+        <video autoPlay muted loop>
+          <source src='/p2023/video.webm' type='video/webm' />
+          <source src='/p2023/video.m4v' type='video/m4v' />
+          <source src='/p2023/video.mp4' type='video/mp4' />
+          <source src='/p2023/video.mov' type='video/mov' />
+        </video>
       </div>
       <div className={styles.gradient}></div>
     </section>
