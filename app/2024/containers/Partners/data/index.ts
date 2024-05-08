@@ -1,25 +1,25 @@
 export const honoraryPartnerData = [
   {
-    id: '2023-sponsor-1',
-    img: '/p2023/media/fut.png',
-    link: 'https://fut.edu.pl/',
-    partnerName: 'Forum Uczelni Technicznych',
-    customClass: 'fut',
-  },
-  {
-    id: '2023-sponsor-2',
-    img: '/p2023/media/pk.png',
+    id: '2024-sponsor-1',
+    img: '/p2024/partners/main/pk.png',
     link: 'https://pk.edu.pl/',
     partnerName: 'Politechnika Krakowska',
     customClass: 'pk',
   },
-  {
-    id: '2023-sponsor-3',
-    img: '/p2023/media/wiit.png',
-    link: 'https://it.pk.edu.pl/',
-    partnerName: 'Wydział Informatyki i Telekomunikacji',
-    customClass: 'wiit',
-  },
+  // {
+  //   id: '2023-sponsor-2',
+  //   img: '/p2023/media/pk.png',
+  //   link: 'https://pk.edu.pl/',
+  //   partnerName: 'Politechnika Krakowska',
+  //   customClass: 'pk',
+  // },
+  // {
+  //   id: '2023-sponsor-3',
+  //   img: '/p2023/media/wiit.png',
+  //   link: 'https://it.pk.edu.pl/',
+  //   partnerName: 'Wydział Informatyki i Telekomunikacji',
+  //   customClass: 'wiit',
+  // },
 ];
 
 export const goldPartnerData = [

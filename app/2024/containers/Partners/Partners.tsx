@@ -20,7 +20,7 @@ export function Partners(): ReactElement {
         categoryName='Patroni honorowi'
         containerClassName={clsx(styles.grid, styles.honoraryPartnerGrid)}
       />
-      <PartnersGrid
+      {/* <PartnersGrid
         partnerArray={goldPartnerData}
         categoryName='Złoty partner'
         containerClassName={clsx(styles.grid, styles.goldPartnerGrid)}
@@ -44,7 +44,7 @@ export function Partners(): ReactElement {
         partnerArray={mediaPartnerDataTwo}
         categoryName=''
         containerClassName={clsx(styles.grid, styles.mediaPartnerGridTwo)}
-      />
+      /> */}
     </section>
   );
 }
