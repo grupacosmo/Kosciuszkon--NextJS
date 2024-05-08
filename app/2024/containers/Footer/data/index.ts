@@ -4,6 +4,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from 'react-icons/fa';
+import { BsDiscord } from 'react-icons/bs';
 
 export const visitUsLinks = [
   {
@@ -69,19 +70,25 @@ export const externalLinksWithIcons = [
 
 export const contacts = [
   {
-    id: '2024-contact-1',
+    id: '2023-contacts-1',
+    href: 'https://discord.gg/kngkbHmBfV',
+    label: 'Discord - Oficjalny kanał',
+    Icon: BsDiscord,
+  },
+  {
+    id: '2024-contact-2',
     href: 'mailto:kosciuszkon@samorzad.pk.edu.pl',
     label: 'kosciuszkon@samorzad.pk.edu.pl',
     Icon: FaEnvelope,
   },
   {
-    id: '2024-contact-2',
+    id: '2024-contact-3',
     href: 'tel: +48 789-123-125',
     label: '+48 789-123-125',
     Icon: FaPhoneAlt,
   },
   {
-    id: '2024-contact-3',
+    id: '2024-contact-4',
     href: 'tel: +48 795-773-929',
     label: '+48 795-773-929',
     Icon: FaPhoneAlt,
