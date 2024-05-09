@@ -4,46 +4,35 @@ import { PartnersGrid } from './components/PartnersGrid';
 import styles from './Partners.module.scss';
 
 import {
-  honoraryPartnerData,
-  goldPartnerData,
-  silverPartnerData,
-  eventPartnerData,
-  mediaPartnerDataOne,
-  mediaPartnerDataTwo,
+  honoraryPartnersData,
+  eventPartnersData,
+  mediaPartnersData,
 } from './data';
 
 export function Partners(): ReactElement {
   return (
     <section className={styles.container}>
       <PartnersGrid
-        partnerArray={honoraryPartnerData}
+        partnerArray={honoraryPartnersData}
         categoryName='Patroni honorowi'
-        containerClassName={clsx(styles.grid, styles.honoraryPartnerGrid)}
+        containerClassName={clsx(styles.grid, styles.honoraryPartnersGrid)}
       />
-      {/* <PartnersGrid
-        partnerArray={goldPartnerData}
-        categoryName='Złoty partner'
-        containerClassName={clsx(styles.grid, styles.goldPartnerGrid)}
-      />
+
       <PartnersGrid
-        partnerArray={silverPartnerData}
-        categoryName='Srebrni partnerzy'
-        containerClassName={clsx(styles.grid, styles.silverPartnerGrid)}
-      />
-      <PartnersGrid
-        partnerArray={eventPartnerData}
+        partnerArray={eventPartnersData}
         categoryName='Partnerzy wydarzenia'
-        containerClassName={clsx(styles.grid, styles.eventPartnerGrid)}
+        containerClassName={clsx(styles.grid, styles.eventPartnersGrid)}
       />
-      <PartnersGrid
-        partnerArray={mediaPartnerDataOne}
+
+      {/* <PartnersGrid
+        partnerArray={mediaPartnersData}
         categoryName='Patroni medialni'
-        containerClassName={clsx(styles.grid, styles.mediaPartnerGridOne)}
+        containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
       />
       <PartnersGrid
-        partnerArray={mediaPartnerDataTwo}
+        partnerArray={mediaPartnersData}
         categoryName=''
-        containerClassName={clsx(styles.grid, styles.mediaPartnerGridTwo)}
+        containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
       /> */}
     </section>
   );

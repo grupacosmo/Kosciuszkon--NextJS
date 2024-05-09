@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.honoraryPartnerGrid {
+.honoraryPartnersGrid {
   padding: $space-xl 0;
   // grid-template-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
@@ -35,100 +35,54 @@
   }
 }
 
-.goldPartnerGrid {
-  padding: $space-xl 0;
-  grid-template-columns: 1fr;
-
-  img {
-    width: 544px;
-    height: auto;
-
-    @include maxWidth($bp-mobile) {
-      width: 272px;
-      height: auto;
-    }
-  }
-}
-
-.silverPartnerGrid {
+.eventPartnersGrid {
+  padding: $space-h 0;
   grid-template-columns: 1fr 1fr 1fr;
 
   @include maxWidth($bp-tablet) {
     grid-template-columns: 1fr;
-
-    div:nth-child(3n) {
-      padding-top: $space-h;
-    }
+    gap: $space-xl;
   }
 
   div:first-child {
     img {
       width: 232px;
       height: auto;
-      filter: invert(100%);
+
+      @include maxWidth($bp-mobile) {
+        width: 132px;
+        height: auto;
+      }
     }
   }
 
   div:nth-child(2n) {
     img {
-      width: 180px;
+      width: 262px;
       height: auto;
+
+      @include maxWidth($bp-mobile) {
+        width: 162px;
+        height: auto;
+      }
     }
   }
 
-  img {
-    width: 232px;
-    height: auto;
-
-    @include maxWidth($bp-tablet) {
-      margin-top: 0;
-    }
-  }
-}
-
-.eventPartnerGrid {
-  grid-template-columns: repeat(5, 1fr);
-
-  @include maxWidth($bp-desktop) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include maxWidth($bp-tablet) {
-    padding-top: $space-h;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include maxWidth($bp-mobile) {
-    padding-top: $space-h;
-    grid-template-columns: repeat(1, 1fr);
-
-    div:first-of-type {
-      margin-bottom: $space-h;
-    }
-  }
-
-  div:nth-child(2n + 1) {
-    img {
-      width: 180px;
-      height: auto;
-    }
-  }
-
-  div:nth-child(2n) {
-    img {
-      width: 120px;
-      height: auto;
-    }
-  }
   div:nth-child(3n) {
     img {
-      width: 300px;
+      width: 284px;
       height: auto;
+
+      @include maxWidth($bp-mobile) {
+        width: 182px;
+        height: auto;
+      }
     }
   }
 }
 
-.mediaPartnerGridOne {
+
+.mediaPartnersGrid {
   padding: $space-h 0 $space-l 0;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -157,19 +111,3 @@
   }
 }
 
-.mediaPartnerGridTwo {
-  padding: $space-l 0 $space-h 0;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: center;
-
-  @include maxWidth($bp-tablet) {
-    grid-template-columns: 1fr;
-    row-gap: $space-h;
-  }
-
-  img {
-    width: 272px;
-    height: auto;
-  }
-}
