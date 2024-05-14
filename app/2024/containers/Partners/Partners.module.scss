@@ -36,12 +36,13 @@
 }
 
 .eventPartnersGrid {
-  padding: $space-h 0;
+  padding: $space-h 0 $space-xl 0;
   grid-template-columns: 1fr 1fr 1fr;
 
   @include maxWidth($bp-tablet) {
     grid-template-columns: 1fr;
     gap: $space-xl;
+    padding: $space-h 0 0 0;
   }
 
   div:first-child {
@@ -81,16 +82,15 @@
   }
 }
 
-
 .mediaPartnersGrid {
-  padding: $space-h 0 $space-l 0;
-  grid-template-columns: repeat(4, 1fr);
+  padding: $space-h 0;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
 
   @include maxWidth($bp-desktop) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: $space-xl;
+    row-gap: $space-h;
   }
 
   @include maxWidth($bp-mobile) {
@@ -99,15 +99,24 @@
   }
 
   img {
-    width: 272px;
+    width: 360px;
     height: auto;
-  }
 
-  div:nth-child(2n) {
-    img {
-      width: 200px;
+    @include maxWidth($bp-desktop) {
+      width: 300px;
+      height: auto;
+    }
+
+    @include maxWidth($bp-mobile) {
+      width: 240px;
       height: auto;
     }
   }
-}
 
+  // div:nth-child(2n) {
+  //   img {
+  //     width: 200px;
+  //     height: auto;
+  //   }
+  // }
+}

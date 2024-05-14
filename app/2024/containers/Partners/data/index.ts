@@ -34,4 +34,26 @@ export const eventPartnersData = [
 
 
 
-export const mediaPartnersData = [];
+export const mediaPartnersData = [
+  {
+    id: '2024-media-partner-1',
+    img: '/p2024/partners/media/4programmers-green.png',
+    link: 'https://4programmers.net/',
+    partnerName: '4programmers',
+    customClass: 'programmers',
+  },
+  {
+    id: '2024-media-partner-2',
+    img: '/p2024/partners/media/podprad.png',
+    link: 'https://podprad.pl/',
+    partnerName: 'Pod prąd',
+    customClass: 'podprad',
+  },
+  {
+    id: '2024-media-partner-3',
+    img: '/p2024/partners/media/dlastudentapl.png',
+    link: 'https://www.dlastudenta.pl/',
+    partnerName: 'Dla studenta',
+    customClass: 'dlastudentapl',
+  },
+];

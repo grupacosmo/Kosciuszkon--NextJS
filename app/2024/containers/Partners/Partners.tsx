@@ -24,16 +24,19 @@ export function Partners(): ReactElement {
         containerClassName={clsx(styles.grid, styles.eventPartnersGrid)}
       />
 
-      {/* <PartnersGrid
+      <PartnersGrid
         partnerArray={mediaPartnersData}
         categoryName='Patroni medialni'
         containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
       />
+
+      {/* 
       <PartnersGrid
         partnerArray={mediaPartnersData}
         categoryName=''
         containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
-      /> */}
+      /> 
+      */}
     </section>
   );
 }
