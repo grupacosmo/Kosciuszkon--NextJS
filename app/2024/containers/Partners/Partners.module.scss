@@ -80,6 +80,30 @@
       }
     }
   }
+
+  div:nth-child(4n) {
+    img {
+      width: 284px;
+      height: auto;
+      filter: contrast(80%);
+
+      @include maxWidth($bp-mobile) {
+        width: 182px;
+        height: auto;
+      }
+    }
+  }
+  div:nth-child(5n) {
+    img {
+      width: 284px;
+      height: auto;
+
+      @include maxWidth($bp-mobile) {
+        width: 182px;
+        height: auto;
+      }
+    }
+  }
 }
 
 .mediaPartnersGrid {

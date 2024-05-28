@@ -30,9 +30,14 @@ export const eventPartnersData = [
     partnerName: 'Luxoft',
     customClass: 'luxoft',
   },
+  {
+    id: '2024-event-partner-4',
+    img: '/p2024/partners/standard/kml.png',
+    link: 'https://kolejemalopolskie.com.pl/',
+    partnerName: 'Koleje Małopolskie',
+    customClass: 'kolejemalopolskie',
+  },
 ];
-
-
 
 export const mediaPartnersData = [
   {
