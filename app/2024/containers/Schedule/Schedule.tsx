@@ -1,17 +1,27 @@
 'use client';
 
-import { type ReactElement, useState } from 'react';
+import type { ReactElement } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
-import { SchedulePlaceholder } from './components/SchedulePlaceholder.';
+import { ScheduleTable } from './components/ScheduleTable';
+import { scheduleData } from './data';
 
 import styles from './Schedule.module.scss';
 
 export function Schedule(): ReactElement {
-  const [isHackathon, setIsHackathon] = useState<boolean>(true);
-
   return (
     <section className={styles.schedule}>
-      <SchedulePlaceholder />
+      <div className={styles.controls}>
+        <h3>Hackathon</h3>
+      </div>
+      <AnimatePresence>
+        <ScheduleTable
+          firstTitle='Niedziela'
+          firstArray={scheduleData.hackathon.sunday}
+          secondTitle='Poniedziałek'
+          secondArray={scheduleData.hackathon.monday}
+        />
+      </AnimatePresence>
     </section>
   );
 }

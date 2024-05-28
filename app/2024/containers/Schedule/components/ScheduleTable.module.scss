@@ -29,7 +29,7 @@
   }
 
   article {
-    padding: 0 $space-s;
+    padding: 0 $space-m;
 
     @include maxWidth($bp-desktop) {
       margin: $space-xl 0;

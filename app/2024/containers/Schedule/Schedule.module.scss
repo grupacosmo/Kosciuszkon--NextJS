@@ -8,3 +8,45 @@
   flex-direction: column;
   align-items: center;
 }
+
+.schedule {
+  width: 948px;
+  min-height: 500px;
+  margin: $space-h auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-main;
+  border-radius: $radius-l;
+  background-color: $color-background-dark;
+  overflow: hidden;
+
+  @include maxWidth($bp-desktop) {
+    width: 464px;
+  }
+  @include maxWidth($bp-mobile) {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.controls {
+  width: 100%;
+  height: 64px;
+  margin: 0 auto $space-xxl auto;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $color-main;
+  color: $color-background-dark;
+
+  & h3 {
+    align-self: center;
+    font-size: $header-xh;
+  }
+
+  @include maxWidth($bp-desktop) {
+    margin-bottom: $space-l;
+  }
+  @include maxWidth($bp-mobile) {
+    margin-bottom: $space-m;
+  }
+}
+
