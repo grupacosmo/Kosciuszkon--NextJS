@@ -37,6 +37,13 @@ export const eventPartnersData = [
     partnerName: 'Koleje Małopolskie',
     customClass: 'kolejemalopolskie',
   },
+  {
+    id: '2024-event-partner-5',
+    img: '/p2024/partners/standard/hitachi.png',
+    link: 'https://www.facebook.com/hitachienergy.global',
+    partnerName: 'Hitachi Energy',
+    customClass: 'hitachi',
+  },
 ];
 
 export const mediaPartnersData = [

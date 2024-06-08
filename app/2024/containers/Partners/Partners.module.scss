@@ -95,13 +95,8 @@
   }
   div:nth-child(5n) {
     img {
-      width: 284px;
+      width: 164px;
       height: auto;
-
-      @include maxWidth($bp-mobile) {
-        width: 182px;
-        height: auto;
-      }
     }
   }
 }
