@@ -76,6 +76,12 @@ export const scheduleData = {
         description: '',
       },
       {
+        id: '2024-schedule-13',
+        title: 'Rozdanie nagród dla uczestników turnieju e-sportowego',
+        time: ' 15:30 - 16:00',
+        description: '',
+      },
+      {
         id: '2024-schedule-14',
         title: 'Zakończenie wydarzenia, rozdanie nagród',
         time: '16:00 - 17:00',
