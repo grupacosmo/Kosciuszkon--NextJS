@@ -31,6 +31,7 @@ export function Questions(): ReactElement {
           href='https://forms.office.com/e/eH1rLsTQvK'
           alt='Czarny sześciokąt z zielonym obramowaniem i ikoną formularza.'
           Icon={FaWpforms}
+          disabled
         />
         <HexagonLink
           id='faq__fb-evennt-label'
