@@ -2,6 +2,7 @@ import { type ReactElement } from 'react';
 import clsx from 'clsx';
 import { PartnersGrid } from './components/PartnersGrid';
 import styles from './Partners.module.scss';
+import './Partners.scss';
 
 import {
   honoraryPartnersData,
@@ -29,14 +30,6 @@ export function Partners(): ReactElement {
         categoryName='Patroni medialni'
         containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
       />
-
-      {/* 
-      <PartnersGrid
-        partnerArray={mediaPartnersData}
-        categoryName=''
-        containerClassName={clsx(styles.grid, styles.mediaPartnersGrid)}
-      /> 
-      */}
     </section>
   );
 }

@@ -6,6 +6,13 @@ export const honoraryPartnersData = [
     partnerName: 'Politechnika Krakowska',
     customClass: 'pk',
   },
+  {
+    id: '2024-honorary-sponsor-2',
+    img: '/p2024/partners/main/malopolska.png',
+    link: 'https://www.malopolska.pl/',
+    partnerName: 'Małopolska',
+    customClass: 'malopolska',
+  },
 ];
 
 export const eventPartnersData = [
@@ -43,6 +50,13 @@ export const eventPartnersData = [
     link: 'https://www.facebook.com/hitachienergy.global',
     partnerName: 'Hitachi Energy',
     customClass: 'hitachi',
+  },
+  {
+    id: '2024-event-partner-6',
+    img: '/p2024/partners/main/cracov.png',
+    link: 'https://www.krakow.pl/',
+    partnerName: 'Kraków',
+    customClass: 'cracov',
   },
 ];
 

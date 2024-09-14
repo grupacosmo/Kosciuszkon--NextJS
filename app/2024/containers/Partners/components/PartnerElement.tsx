@@ -1,22 +1,21 @@
 import { ReactElement } from 'react';
 
-
 export type PartnerElementProps = {
   id: string;
   img: string;
   link: string;
   partnerName: string;
-  className?: string;
+  customClass?: string;
 };
 
 export function PartnerElement({
   img,
   link,
   partnerName,
-  className,
+  customClass,
 }: PartnerElementProps): ReactElement {
   return (
-    <div className={className}>
+    <div className={customClass}>
       <a href={link} target='_blank' rel='noreferrer' aria-label={partnerName}>
         <img src={img} alt={partnerName} />
       </a>
